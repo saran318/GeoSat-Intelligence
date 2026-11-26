@@ -14,6 +14,6 @@ pyproj
 Pillow
 
 # Cloud Storage & Database
-supabase>=2.9.0
+supabase>=2.16.0
 boto3>=1.35.0
 requests>=2.32.0

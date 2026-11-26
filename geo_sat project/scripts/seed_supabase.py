@@ -26,7 +26,7 @@ def load_regions():
     with open(config_path, "r", encoding="utf-8") as f:
         raw = json.load(f)
 
-    rows = []
+    by_id = {}
     for group_key, level_name in (
         ("regions", "region"),
         ("states", "state"),
@@ -34,9 +34,12 @@ def load_regions():
         ("cities", "city"),
     ):
         for loc_id, entry in raw.get(group_key, {}).items():
+            # Deduplicate shared district/city IDs so batch upsert never hits ON CONFLICT twice
+            if loc_id in by_id:
+                continue
             tile_val = entry.get("tile") or entry.get("tiles", ["44P"])
             tile_str = ", ".join(tile_val) if isinstance(tile_val, list) else str(tile_val)
-            rows.append({
+            by_id[loc_id] = {
                 "id": loc_id,
                 "name": entry.get("name", loc_id),
                 "level": level_name,
@@ -46,8 +49,8 @@ def load_regions():
                 "bbox": entry.get("bbox", []),
                 "center": entry.get("center", []),
                 "description": entry.get("description"),
-            })
-    return rows
+            }
+    return list(by_id.values())
 
 
 def load_year_stats():
