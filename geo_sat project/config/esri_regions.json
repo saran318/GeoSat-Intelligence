@@ -1,0 +1,2274 @@
+{
+  "dataset": "Esri 10m Annual Land Use Land Cover (2019-2025)",
+  "resolution_meters": 10.0,
+  "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "classes": {
+    "1": "Water",
+    "2": "Trees",
+    "4": "Flooded vegetation",
+    "5": "Crops",
+    "7": "Built Area",
+    "8": "Bare ground",
+    "9": "Snow/Ice",
+    "10": "Clouds",
+    "11": "Rangeland"
+  },
+  "regions": {
+    "South_India_West": {
+      "name": "South India West",
+      "crs": "EPSG:32643",
+      "bbox": [
+        71.91,
+        7.99,
+        78.09,
+        16.02
+      ],
+      "center": [
+        75.0,
+        12.0
+      ],
+      "description": "UTM Zone 43N tile covering Western Tamil Nadu, Western Ghats, Kerala, and Southern Karnataka.",
+      "tiles": [
+        "43P"
+      ]
+    },
+    "South_India_East": {
+      "name": "South India East",
+      "crs": "EPSG:32644",
+      "bbox": [
+        77.91,
+        7.99,
+        84.09,
+        16.02
+      ],
+      "center": [
+        81.0,
+        12.0
+      ],
+      "description": "UTM Zone 44N tile covering Eastern Tamil Nadu, Coromandel Coast, Puducherry, and Rayalaseema.",
+      "tiles": [
+        "44P"
+      ]
+    },
+    "Tamil_Nadu_Composite": {
+      "name": "Tamil Nadu Composite",
+      "crs": "EPSG:4326",
+      "bbox": [
+        76.24,
+        8.08,
+        80.35,
+        13.57
+      ],
+      "center": [
+        78.65,
+        11.12
+      ],
+      "description": "Composite state-wide boundary spanning both 43P and 44P tiles.",
+      "tiles": [
+        "43P",
+        "44P"
+      ]
+    }
+  },
+  "states": {
+    "Tamil_Nadu": {
+      "name": "Tamil Nadu",
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "bbox": [
+        76.24,
+        8.08,
+        80.35,
+        13.57
+      ],
+      "center": [
+        78.65,
+        11.12
+      ],
+      "capital": "Chennai"
+    },
+    "Kerala": {
+      "name": "Kerala",
+      "tiles": [
+        "43P"
+      ],
+      "bbox": [
+        74.86,
+        8.29,
+        77.41,
+        12.79
+      ],
+      "center": [
+        76.27,
+        10.85
+      ],
+      "capital": "Thiruvananthapuram"
+    },
+    "Puducherry": {
+      "name": "Puducherry",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.75,
+        11.85,
+        79.88,
+        12.03
+      ],
+      "center": [
+        79.81,
+        11.94
+      ],
+      "capital": "Puducherry"
+    }
+  },
+  "districts": {
+    "Ariyalur": {
+      "name": "Ariyalur",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        78.94199,
+        10.88672,
+        79.51041,
+        11.41831
+      ],
+      "boundary": "boundaries/ariyalur.geojson",
+      "center": [
+        79.2262,
+        11.1525
+      ],
+      "area_km2": 1931.71
+    },
+    "Chengalpattu": {
+      "name": "Chengalpattu",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.64042,
+        12.22947,
+        80.2549,
+        13.03614
+      ],
+      "boundary": "boundaries/chengalpattu.geojson",
+      "center": [
+        79.9477,
+        12.6328
+      ],
+      "area_km2": 2662.91
+    },
+    "Chennai": {
+      "name": "Chennai",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        80.1278,
+        12.85725,
+        80.30095,
+        13.14302
+      ],
+      "boundary": "boundaries/chennai.geojson",
+      "center": [
+        80.2144,
+        13.0001
+      ],
+      "area_km2": 322.37
+    },
+    "Coimbatore": {
+      "name": "Coimbatore",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P"
+      ],
+      "bbox": [
+        76.65899,
+        10.22237,
+        77.29445,
+        11.40256
+      ],
+      "boundary": "boundaries/coimbatore.geojson",
+      "center": [
+        76.9767,
+        10.8125
+      ],
+      "area_km2": 4702.43
+    },
+    "Cuddalore": {
+      "name": "Cuddalore",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        78.87728,
+        11.15054,
+        79.81299,
+        11.88127
+      ],
+      "boundary": "boundaries/cuddalore.geojson",
+      "center": [
+        79.3451,
+        11.5159
+      ],
+      "area_km2": 3688.31
+    },
+    "Dharmapuri": {
+      "name": "Dharmapuri",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "bbox": [
+        77.67573,
+        11.79239,
+        78.73387,
+        12.50736
+      ],
+      "boundary": "boundaries/dharmapuri.geojson",
+      "center": [
+        78.2048,
+        12.1499
+      ],
+      "area_km2": 4483.17
+    },
+    "Dindigul": {
+      "name": "Dindigul",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "bbox": [
+        77.26764,
+        10.02605,
+        78.33801,
+        10.81134
+      ],
+      "boundary": "boundaries/dindigul.geojson",
+      "center": [
+        77.8028,
+        10.4187
+      ],
+      "area_km2": 6074.08
+    },
+    "Erode": {
+      "name": "Erode",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P"
+      ],
+      "bbox": [
+        76.83447,
+        11.02454,
+        77.93283,
+        11.95215
+      ],
+      "boundary": "boundaries/erode.geojson",
+      "center": [
+        77.3836,
+        11.4883
+      ],
+      "area_km2": 5776.39
+    },
+    "Kallakurichi": {
+      "name": "Kallakurichi",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        78.62659,
+        11.5055,
+        79.46261,
+        12.08096
+      ],
+      "boundary": "boundaries/kallakurichi.geojson",
+      "center": [
+        79.0446,
+        11.7932
+      ],
+      "area_km2": 3276.37
+    },
+    "Kanchipuram": {
+      "name": "Kanchipuram",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.55938,
+        12.53211,
+        80.10507,
+        13.04682
+      ],
+      "boundary": "boundaries/kanchipuram.geojson",
+      "center": [
+        79.8322,
+        12.7895
+      ],
+      "area_km2": 1641.17
+    },
+    "Kanyakumari": {
+      "name": "Kanyakumari",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P"
+      ],
+      "bbox": [
+        77.09799,
+        8.07633,
+        77.58945,
+        8.57867
+      ],
+      "boundary": "boundaries/kanyakumari.geojson",
+      "center": [
+        77.3437,
+        8.3275
+      ],
+      "area_km2": 1669.99
+    },
+    "Karur": {
+      "name": "Karur",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "bbox": [
+        77.75094,
+        10.54695,
+        78.57879,
+        11.09654
+      ],
+      "boundary": "boundaries/karur.geojson",
+      "center": [
+        78.1649,
+        10.8217
+      ],
+      "area_km2": 2932.56
+    },
+    "Krishnagiri": {
+      "name": "Krishnagiri",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "bbox": [
+        77.4711,
+        12.13947,
+        78.67149,
+        12.891
+      ],
+      "boundary": "boundaries/krishnagiri.geojson",
+      "center": [
+        78.0713,
+        12.5152
+      ],
+      "area_km2": 5147.91
+    },
+    "Madurai": {
+      "name": "Madurai",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "bbox": [
+        77.46411,
+        9.56309,
+        78.45753,
+        10.31013
+      ],
+      "boundary": "boundaries/madurai.geojson",
+      "center": [
+        77.9608,
+        9.9366
+      ],
+      "area_km2": 3696.96
+    },
+    "Mayiladuthurai": {
+      "name": "Mayiladuthurai",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.511,
+        10.96547,
+        79.85613,
+        11.42393
+      ],
+      "boundary": "boundaries/mayiladuthurai.geojson",
+      "center": [
+        79.6836,
+        11.1947
+      ],
+      "area_km2": 1192.78
+    },
+    "Nagapattinam": {
+      "name": "Nagapattinam",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.47194,
+        10.27188,
+        79.88236,
+        10.92947
+      ],
+      "boundary": "boundaries/nagapattinam.geojson",
+      "center": [
+        79.6772,
+        10.6007
+      ],
+      "area_km2": 1538.19
+    },
+    "Namakkal": {
+      "name": "Namakkal",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "bbox": [
+        77.68273,
+        11.01329,
+        78.48609,
+        11.59719
+      ],
+      "boundary": "boundaries/namakkal.geojson",
+      "center": [
+        78.0844,
+        11.3052
+      ],
+      "area_km2": 3390.12
+    },
+    "Nilgiris": {
+      "name": "Nilgiris",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P"
+      ],
+      "bbox": [
+        76.23341,
+        11.18542,
+        77.01287,
+        11.7052
+      ],
+      "boundary": "boundaries/nilgiris.geojson",
+      "center": [
+        76.6231,
+        11.4453
+      ],
+      "area_km2": 2561.26
+    },
+    "Perambalur": {
+      "name": "Perambalur",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        78.65108,
+        11.05885,
+        79.1682,
+        11.52294
+      ],
+      "boundary": "boundaries/perambalur.geojson",
+      "center": [
+        78.9096,
+        11.2909
+      ],
+      "area_km2": 1753.94
+    },
+    "Pudukkottai": {
+      "name": "Pudukkottai",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        78.45286,
+        9.85054,
+        79.25156,
+        10.73484
+      ],
+      "boundary": "boundaries/pudukkottai.geojson",
+      "center": [
+        78.8522,
+        10.2927
+      ],
+      "area_km2": 4661.32
+    },
+    "Ramanathapuram": {
+      "name": "Ramanathapuram",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        78.2185,
+        9.09395,
+        79.34659,
+        9.94392
+      ],
+      "boundary": "boundaries/ramanathapuram.geojson",
+      "center": [
+        78.7825,
+        9.5189
+      ],
+      "area_km2": 4236.33
+    },
+    "Ranipet": {
+      "name": "Ranipet",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.17811,
+        12.6283,
+        79.78967,
+        13.19927
+      ],
+      "boundary": "boundaries/ranipet.geojson",
+      "center": [
+        79.4839,
+        12.9138
+      ],
+      "area_km2": 1874.25
+    },
+    "Salem": {
+      "name": "Salem",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "bbox": [
+        77.66174,
+        11.31536,
+        78.84289,
+        11.97915
+      ],
+      "boundary": "boundaries/salem.geojson",
+      "center": [
+        78.2523,
+        11.6473
+      ],
+      "area_km2": 5261.83
+    },
+    "Sivaganga": {
+      "name": "Sivaganga",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        78.12522,
+        9.52034,
+        78.99854,
+        10.4097
+      ],
+      "boundary": "boundaries/sivaganga.geojson",
+      "center": [
+        78.5619,
+        9.965
+      ],
+      "area_km2": 4117.89
+    },
+    "Tenkasi": {
+      "name": "Tenkasi",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P"
+      ],
+      "bbox": [
+        77.14929,
+        8.74068,
+        77.85937,
+        9.42021
+      ],
+      "boundary": "boundaries/tenkasi.geojson",
+      "center": [
+        77.5043,
+        9.0804
+      ],
+      "area_km2": 2967.92
+    },
+    "Thanjavur": {
+      "name": "Thanjavur",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        78.85221,
+        10.13687,
+        79.55297,
+        11.18373
+      ],
+      "boundary": "boundaries/thanjavur.geojson",
+      "center": [
+        79.2026,
+        10.6603
+      ],
+      "area_km2": 3417.93
+    },
+    "Theni": {
+      "name": "Theni",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P"
+      ],
+      "bbox": [
+        77.16794,
+        9.51922,
+        77.7247,
+        10.21112
+      ],
+      "boundary": "boundaries/theni.geojson",
+      "center": [
+        77.4463,
+        9.8652
+      ],
+      "area_km2": 2870.12
+    },
+    "Thoothukudi": {
+      "name": "Thoothukudi",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "bbox": [
+        77.67398,
+        8.32441,
+        78.38524,
+        9.36846
+      ],
+      "boundary": "boundaries/thoothukudi.geojson",
+      "center": [
+        78.0296,
+        8.8464
+      ],
+      "area_km2": 4673.35
+    },
+    "Tiruchirappalli": {
+      "name": "Tiruchirappalli",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        78.16486,
+        10.30057,
+        79.01254,
+        11.40762
+      ],
+      "boundary": "boundaries/tiruchirappalli.geojson",
+      "center": [
+        78.5887,
+        10.8541
+      ],
+      "area_km2": 4492.65
+    },
+    "Tirunelveli": {
+      "name": "Tirunelveli",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P"
+      ],
+      "bbox": [
+        77.17902,
+        8.1399,
+        77.97073,
+        9.06863
+      ],
+      "boundary": "boundaries/tirunelveli.geojson",
+      "center": [
+        77.5749,
+        8.6043
+      ],
+      "area_km2": 3929.72
+    },
+    "Tirupathur": {
+      "name": "Tirupathur",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        78.40739,
+        12.25816,
+        78.91284,
+        12.89494
+      ],
+      "boundary": "boundaries/tirupathur.geojson",
+      "center": [
+        78.6601,
+        12.5766
+      ],
+      "area_km2": 1977.39
+    },
+    "Tiruppur": {
+      "name": "Tiruppur",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P"
+      ],
+      "bbox": [
+        77.04143,
+        10.2325,
+        77.87803,
+        11.35193
+      ],
+      "boundary": "boundaries/tiruppur.geojson",
+      "center": [
+        77.4597,
+        10.7922
+      ],
+      "area_km2": 5194.76
+    },
+    "Tiruvallur": {
+      "name": "Tiruvallur",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.28421,
+        12.94501,
+        80.34643,
+        13.56266
+      ],
+      "boundary": "boundaries/tiruvallur.geojson",
+      "center": [
+        79.8153,
+        13.2538
+      ],
+      "area_km2": 3397.32
+    },
+    "Tiruvannamalai": {
+      "name": "Tiruvannamalai",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        78.63068,
+        11.98421,
+        79.75585,
+        12.87413
+      ],
+      "boundary": "boundaries/tiruvannamalai.geojson",
+      "center": [
+        79.1933,
+        12.4292
+      ],
+      "area_km2": 6224.23
+    },
+    "Tiruvarur": {
+      "name": "Tiruvarur",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.27197,
+        10.35907,
+        79.75935,
+        11.01554
+      ],
+      "boundary": "boundaries/tiruvarur.geojson",
+      "center": [
+        79.5157,
+        10.6873
+      ],
+      "area_km2": 2147.69
+    },
+    "Vellore": {
+      "name": "Vellore",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        78.60269,
+        12.63337,
+        79.29354,
+        13.15708
+      ],
+      "boundary": "boundaries/vellore.geojson",
+      "center": [
+        78.9481,
+        12.8952
+      ],
+      "area_km2": 2226.81
+    },
+    "Viluppuram": {
+      "name": "Viluppuram",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.17111,
+        11.78282,
+        80.00771,
+        12.45054
+      ],
+      "boundary": "boundaries/viluppuram.geojson",
+      "center": [
+        79.5894,
+        12.1167
+      ],
+      "area_km2": 3958.57
+    },
+    "Virudhunagar": {
+      "name": "Virudhunagar",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "bbox": [
+        77.33934,
+        9.20195,
+        78.42954,
+        9.78642
+      ],
+      "boundary": "boundaries/virudhunagar.geojson",
+      "center": [
+        77.8844,
+        9.4942
+      ],
+      "area_km2": 4241.58
+    },
+    "Chennai Metropolitan Area": {
+      "name": "Chennai Metropolitan Area",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.97594,
+        12.85008,
+        80.30095,
+        13.2031
+      ],
+      "boundary": "boundaries/chennai_cma.geojson",
+      "center": [
+        80.1384,
+        13.0266
+      ],
+      "area_km2": 705.84
+    }
+  },
+  "cities": {
+    "Chennai": {
+      "name": "Chennai Metropolitan Area",
+      "district": "Chennai",
+      "crs": "EPSG:32644",
+      "bbox": [
+        80.1278,
+        12.85725,
+        80.30095,
+        13.14302
+      ],
+      "center": [
+        80.27,
+        13.08
+      ],
+      "zoom": 12,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/chennai.geojson",
+      "area_km2": 322.37
+    },
+    "Avadi": {
+      "name": "Avadi",
+      "state": "Tamil Nadu",
+      "district": "Tiruvallur",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.99916,
+        13.08331,
+        80.17129,
+        13.2031
+      ],
+      "boundary": "boundaries/avadi.geojson",
+      "center": [
+        80.0852,
+        13.1432
+      ],
+      "area_km2": 150.97
+    },
+    "Tambaram": {
+      "name": "Tambaram",
+      "state": "Tamil Nadu",
+      "district": "Chengalpattu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        80.05804,
+        12.85008,
+        80.21405,
+        12.95559
+      ],
+      "boundary": "boundaries/tambaram.geojson",
+      "center": [
+        80.136,
+        12.9028
+      ],
+      "area_km2": 102.48
+    },
+    "Kanchipuram": {
+      "name": "Kanchipuram Urban Core",
+      "district": "Kanchipuram",
+      "crs": "EPSG:32644",
+      "bbox": [
+        79.55938,
+        12.53211,
+        80.10507,
+        13.04682
+      ],
+      "center": [
+        79.7,
+        12.83
+      ],
+      "zoom": 14,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/kanchipuram.geojson",
+      "area_km2": 1641.17
+    },
+    "Chengalpattu": {
+      "name": "Chengalpattu Urban Area",
+      "district": "Chengalpattu",
+      "crs": "EPSG:32644",
+      "bbox": [
+        79.64042,
+        12.22947,
+        80.2549,
+        13.03614
+      ],
+      "center": [
+        79.98,
+        12.69
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/chengalpattu.geojson",
+      "area_km2": 2662.91
+    },
+    "Tiruvallur": {
+      "name": "Tiruvallur Urban Area",
+      "district": "Tiruvallur",
+      "crs": "EPSG:32644",
+      "bbox": [
+        79.28421,
+        12.94501,
+        80.34643,
+        13.56266
+      ],
+      "center": [
+        79.91,
+        13.14
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/tiruvallur.geojson",
+      "area_km2": 3397.32
+    },
+    "Vellore": {
+      "name": "Vellore Urban Core",
+      "district": "Vellore",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.60269,
+        12.63337,
+        79.29354,
+        13.15708
+      ],
+      "center": [
+        79.13,
+        12.91
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/vellore.geojson",
+      "area_km2": 2226.81
+    },
+    "Ranipet": {
+      "name": "Ranipet Industrial Core",
+      "district": "Ranipet",
+      "crs": "EPSG:32644",
+      "bbox": [
+        79.17811,
+        12.6283,
+        79.78967,
+        13.19927
+      ],
+      "center": [
+        79.33,
+        12.93
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/ranipet.geojson",
+      "area_km2": 1874.25
+    },
+    "Tirupathur": {
+      "name": "Tirupathur Urban Area",
+      "district": "Tirupathur",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.40739,
+        12.25816,
+        78.91284,
+        12.89494
+      ],
+      "center": [
+        78.57,
+        12.5
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/tirupathur.geojson",
+      "area_km2": 1977.39
+    },
+    "Tiruvannamalai": {
+      "name": "Tiruvannamalai Urban Core",
+      "district": "Tiruvannamalai",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.63068,
+        11.98421,
+        79.75585,
+        12.87413
+      ],
+      "center": [
+        79.07,
+        12.23
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/tiruvannamalai.geojson",
+      "area_km2": 6224.23
+    },
+    "Viluppuram": {
+      "name": "Viluppuram Urban Area",
+      "district": "Viluppuram",
+      "crs": "EPSG:32644",
+      "bbox": [
+        79.17111,
+        11.78282,
+        80.00771,
+        12.45054
+      ],
+      "center": [
+        79.49,
+        11.94
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/viluppuram.geojson",
+      "area_km2": 3958.57
+    },
+    "Kallakurichi": {
+      "name": "Kallakurichi Urban Area",
+      "district": "Kallakurichi",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.62659,
+        11.5055,
+        79.46261,
+        12.08096
+      ],
+      "center": [
+        78.96,
+        11.74
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/kallakurichi.geojson",
+      "area_km2": 3276.37
+    },
+    "Cuddalore": {
+      "name": "Cuddalore Coastal Core",
+      "district": "Cuddalore",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.87728,
+        11.15054,
+        79.81299,
+        11.88127
+      ],
+      "center": [
+        79.77,
+        11.75
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/cuddalore.geojson",
+      "area_km2": 3688.31
+    },
+    "Chidambaram": {
+      "name": "Chidambaram Urban Area",
+      "district": "Cuddalore",
+      "crs": "EPSG:32644",
+      "bbox": [
+        79.63,
+        11.34,
+        79.75,
+        11.46
+      ],
+      "center": [
+        79.69,
+        11.4
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/cuddalore.geojson"
+    },
+    "Neyveli": {
+      "name": "Neyveli Industrial Basin",
+      "district": "Cuddalore",
+      "crs": "EPSG:32644",
+      "bbox": [
+        79.42,
+        11.48,
+        79.54,
+        11.6
+      ],
+      "center": [
+        79.48,
+        11.54
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/cuddalore.geojson"
+    },
+    "Coimbatore": {
+      "name": "Coimbatore Urban Core",
+      "district": "Coimbatore",
+      "crs": "EPSG:32643",
+      "bbox": [
+        76.65899,
+        10.22237,
+        77.29445,
+        11.40256
+      ],
+      "center": [
+        76.96,
+        11.01
+      ],
+      "zoom": 12,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/coimbatore.geojson",
+      "area_km2": 4702.43
+    },
+    "Tiruppur": {
+      "name": "Tiruppur Urban Core",
+      "district": "Tiruppur",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.04143,
+        10.2325,
+        77.87803,
+        11.35193
+      ],
+      "center": [
+        77.34,
+        11.1
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/tiruppur.geojson",
+      "area_km2": 5194.76
+    },
+    "Erode": {
+      "name": "Erode Urban Core",
+      "district": "Erode",
+      "crs": "EPSG:32643",
+      "bbox": [
+        76.83447,
+        11.02454,
+        77.93283,
+        11.95215
+      ],
+      "center": [
+        77.72,
+        11.34
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/erode.geojson",
+      "area_km2": 5776.39
+    },
+    "Hosur": {
+      "name": "Hosur Industrial Core",
+      "district": "Krishnagiri",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.77,
+        12.68,
+        77.89,
+        12.8
+      ],
+      "center": [
+        77.83,
+        12.74
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/krishnagiri.geojson"
+    },
+    "Pollachi": {
+      "name": "Pollachi Urban Area",
+      "district": "Coimbatore",
+      "crs": "EPSG:32643",
+      "bbox": [
+        76.95,
+        10.6,
+        77.07,
+        10.72
+      ],
+      "center": [
+        77.01,
+        10.66
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/coimbatore.geojson"
+    },
+    "Mettupalayam": {
+      "name": "Mettupalayam Foothills",
+      "district": "Coimbatore",
+      "crs": "EPSG:32643",
+      "bbox": [
+        76.88,
+        11.24,
+        77.0,
+        11.36
+      ],
+      "center": [
+        76.94,
+        11.3
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/coimbatore.geojson"
+    },
+    "Gobichettipalayam": {
+      "name": "Gobichettipalayam Urban Area",
+      "district": "Erode",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.38,
+        11.39,
+        77.5,
+        11.51
+      ],
+      "center": [
+        77.44,
+        11.45
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/erode.geojson"
+    },
+    "Bhavani": {
+      "name": "Bhavani Confluence Basin",
+      "district": "Erode",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.62,
+        11.39,
+        77.74,
+        11.51
+      ],
+      "center": [
+        77.68,
+        11.45
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/erode.geojson"
+    },
+    "Dharapuram": {
+      "name": "Dharapuram Urban Area",
+      "district": "Tiruppur",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.47,
+        10.67,
+        77.59,
+        10.79
+      ],
+      "center": [
+        77.53,
+        10.73
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/tiruppur.geojson"
+    },
+    "Tiruchengode": {
+      "name": "Tiruchengode Industrial Core",
+      "district": "Namakkal",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.84,
+        11.32,
+        77.96,
+        11.44
+      ],
+      "center": [
+        77.9,
+        11.38
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/namakkal.geojson"
+    },
+    "Mettur": {
+      "name": "Mettur Dam Industrial Basin",
+      "district": "Salem",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.74,
+        11.74,
+        77.86,
+        11.86
+      ],
+      "center": [
+        77.8,
+        11.8
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/salem.geojson"
+    },
+    "Udhagamandalam": {
+      "name": "Ooty Nilgiris Plateau",
+      "district": "Nilgiris",
+      "crs": "EPSG:32643",
+      "bbox": [
+        76.63,
+        11.35,
+        76.75,
+        11.47
+      ],
+      "center": [
+        76.69,
+        11.41
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/nilgiris.geojson"
+    },
+    "Coonoor": {
+      "name": "Coonoor Hill Station",
+      "district": "Nilgiris",
+      "crs": "EPSG:32643",
+      "bbox": [
+        76.73,
+        11.29,
+        76.85,
+        11.41
+      ],
+      "center": [
+        76.79,
+        11.35
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/nilgiris.geojson"
+    },
+    "Palani": {
+      "name": "Palani Foothills",
+      "district": "Dindigul",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.46,
+        10.39,
+        77.58,
+        10.51
+      ],
+      "center": [
+        77.52,
+        10.45
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/dindigul.geojson"
+    },
+    "Theni": {
+      "name": "Theni Foothill Basin",
+      "district": "Theni",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.16794,
+        9.51922,
+        77.7247,
+        10.21112
+      ],
+      "center": [
+        77.48,
+        10.01
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/theni.geojson",
+      "area_km2": 2870.12
+    },
+    "Bodinayakanur": {
+      "name": "Bodinayakanur Cardamom Valley",
+      "district": "Theni",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.29,
+        9.95,
+        77.41,
+        10.07
+      ],
+      "center": [
+        77.35,
+        10.01
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/theni.geojson"
+    },
+    "Tenkasi": {
+      "name": "Tenkasi Foothills Core",
+      "district": "Tenkasi",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.14929,
+        8.74068,
+        77.85937,
+        9.42021
+      ],
+      "center": [
+        77.3,
+        8.96
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/tenkasi.geojson",
+      "area_km2": 2967.92
+    },
+    "Rajapalayam": {
+      "name": "Rajapalayam Textile Core",
+      "district": "Virudhunagar",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.49,
+        9.39,
+        77.61,
+        9.51
+      ],
+      "center": [
+        77.55,
+        9.45
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/virudhunagar.geojson"
+    },
+    "Sivakasi": {
+      "name": "Sivakasi Industrial Core",
+      "district": "Virudhunagar",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.74,
+        9.39,
+        77.86,
+        9.51
+      ],
+      "center": [
+        77.8,
+        9.45
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/virudhunagar.geojson"
+    },
+    "Kovilpatti": {
+      "name": "Kovilpatti Urban Area",
+      "district": "Thoothukudi",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.81,
+        9.11,
+        77.93,
+        9.23
+      ],
+      "center": [
+        77.87,
+        9.17
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/thoothukudi.geojson"
+    },
+    "Tirunelveli": {
+      "name": "Tirunelveli Urban Core",
+      "district": "Tirunelveli",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.17902,
+        8.1399,
+        77.97073,
+        9.06863
+      ],
+      "center": [
+        77.72,
+        8.72
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/tirunelveli.geojson",
+      "area_km2": 3929.72
+    },
+    "Nagercoil": {
+      "name": "Nagercoil Urban Core",
+      "district": "Kanyakumari",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.37,
+        8.12,
+        77.49,
+        8.24
+      ],
+      "center": [
+        77.43,
+        8.18
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/kanyakumari.geojson"
+    },
+    "Kanyakumari": {
+      "name": "Kanyakumari Cape Coast",
+      "district": "Kanyakumari",
+      "crs": "EPSG:32643",
+      "bbox": [
+        77.09799,
+        8.07633,
+        77.58945,
+        8.57867
+      ],
+      "center": [
+        77.54,
+        8.08
+      ],
+      "zoom": 14,
+      "tiles": [
+        "43P"
+      ],
+      "boundary": "boundaries/kanyakumari.geojson",
+      "area_km2": 1669.99
+    },
+    "Salem": {
+      "name": "Salem Urban Core",
+      "district": "Salem",
+      "crs": "EPSG:32644",
+      "bbox": [
+        77.66174,
+        11.31536,
+        78.84289,
+        11.97915
+      ],
+      "center": [
+        78.14,
+        11.66
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "boundary": "boundaries/salem.geojson",
+      "area_km2": 5261.83
+    },
+    "Dharmapuri": {
+      "name": "Dharmapuri Urban Area",
+      "district": "Dharmapuri",
+      "crs": "EPSG:32644",
+      "bbox": [
+        77.67573,
+        11.79239,
+        78.73387,
+        12.50736
+      ],
+      "center": [
+        78.16,
+        12.13
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "boundary": "boundaries/dharmapuri.geojson",
+      "area_km2": 4483.17
+    },
+    "Krishnagiri": {
+      "name": "Krishnagiri Urban Area",
+      "district": "Krishnagiri",
+      "crs": "EPSG:32644",
+      "bbox": [
+        77.4711,
+        12.13947,
+        78.67149,
+        12.891
+      ],
+      "center": [
+        78.22,
+        12.52
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "boundary": "boundaries/krishnagiri.geojson",
+      "area_km2": 5147.91
+    },
+    "Namakkal": {
+      "name": "Namakkal Transport Core",
+      "district": "Namakkal",
+      "crs": "EPSG:32644",
+      "bbox": [
+        77.68273,
+        11.01329,
+        78.48609,
+        11.59719
+      ],
+      "center": [
+        78.17,
+        11.22
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "boundary": "boundaries/namakkal.geojson",
+      "area_km2": 3390.12
+    },
+    "Karur": {
+      "name": "Karur Textile Core",
+      "district": "Karur",
+      "crs": "EPSG:32644",
+      "bbox": [
+        77.75094,
+        10.54695,
+        78.57879,
+        11.09654
+      ],
+      "center": [
+        78.08,
+        10.96
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "boundary": "boundaries/karur.geojson",
+      "area_km2": 2932.56
+    },
+    "Dindigul": {
+      "name": "Dindigul Urban Core",
+      "district": "Dindigul",
+      "crs": "EPSG:32644",
+      "bbox": [
+        77.26764,
+        10.02605,
+        78.33801,
+        10.81134
+      ],
+      "center": [
+        77.98,
+        10.37
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "boundary": "boundaries/dindigul.geojson",
+      "area_km2": 6074.08
+    },
+    "Tiruchirappalli": {
+      "name": "Tiruchirappalli Urban Core",
+      "district": "Tiruchirappalli",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.16486,
+        10.30057,
+        79.01254,
+        11.40762
+      ],
+      "center": [
+        78.7,
+        10.79
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/tiruchirappalli.geojson",
+      "area_km2": 4492.65
+    },
+    "Ariyalur": {
+      "name": "Ariyalur Mineral Core",
+      "district": "Ariyalur",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.94199,
+        10.88672,
+        79.51041,
+        11.41831
+      ],
+      "center": [
+        79.08,
+        11.14
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/ariyalur.geojson",
+      "area_km2": 1931.71
+    },
+    "Perambalur": {
+      "name": "Perambalur Urban Area",
+      "district": "Perambalur",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.65108,
+        11.05885,
+        79.1682,
+        11.52294
+      ],
+      "center": [
+        78.88,
+        11.23
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/perambalur.geojson",
+      "area_km2": 1753.94
+    },
+    "Thanjavur": {
+      "name": "Thanjavur Cultural & Delta Core",
+      "district": "Thanjavur",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.85221,
+        10.13687,
+        79.55297,
+        11.18373
+      ],
+      "center": [
+        79.13,
+        10.78
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/thanjavur.geojson",
+      "area_km2": 3417.93
+    },
+    "Kumbakonam": {
+      "name": "Kumbakonam Temple City",
+      "district": "Thanjavur",
+      "crs": "EPSG:32644",
+      "bbox": [
+        79.32,
+        10.9,
+        79.44,
+        11.02
+      ],
+      "center": [
+        79.38,
+        10.96
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/thanjavur.geojson"
+    },
+    "Mayiladuthurai": {
+      "name": "Mayiladuthurai Delta Core",
+      "district": "Mayiladuthurai",
+      "crs": "EPSG:32644",
+      "bbox": [
+        79.511,
+        10.96547,
+        79.85613,
+        11.42393
+      ],
+      "center": [
+        79.65,
+        11.1
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/mayiladuthurai.geojson",
+      "area_km2": 1192.78
+    },
+    "Tiruvarur": {
+      "name": "Tiruvarur Delta Core",
+      "district": "Tiruvarur",
+      "crs": "EPSG:32644",
+      "bbox": [
+        79.27197,
+        10.35907,
+        79.75935,
+        11.01554
+      ],
+      "center": [
+        79.64,
+        10.77
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/tiruvarur.geojson",
+      "area_km2": 2147.69
+    },
+    "Nagapattinam": {
+      "name": "Nagapattinam Port Core",
+      "district": "Nagapattinam",
+      "crs": "EPSG:32644",
+      "bbox": [
+        79.47194,
+        10.27188,
+        79.88236,
+        10.92947
+      ],
+      "center": [
+        79.84,
+        10.77
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/nagapattinam.geojson",
+      "area_km2": 1538.19
+    },
+    "Pudukkottai": {
+      "name": "Pudukkottai Urban Area",
+      "district": "Pudukkottai",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.45286,
+        9.85054,
+        79.25156,
+        10.73484
+      ],
+      "center": [
+        78.82,
+        10.38
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/pudukkottai.geojson",
+      "area_km2": 4661.32
+    },
+    "Madurai": {
+      "name": "Madurai Urban Core",
+      "district": "Madurai",
+      "crs": "EPSG:32644",
+      "bbox": [
+        77.46411,
+        9.56309,
+        78.45753,
+        10.31013
+      ],
+      "center": [
+        78.12,
+        9.92
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "boundary": "boundaries/madurai.geojson",
+      "area_km2": 3696.96
+    },
+    "Sivaganga": {
+      "name": "Sivaganga Urban Area",
+      "district": "Sivaganga",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.12522,
+        9.52034,
+        78.99854,
+        10.4097
+      ],
+      "center": [
+        78.48,
+        9.85
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/sivaganga.geojson",
+      "area_km2": 4117.89
+    },
+    "Karaikudi": {
+      "name": "Karaikudi Heritage Core",
+      "district": "Sivaganga",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.72,
+        10.01,
+        78.84,
+        10.13
+      ],
+      "center": [
+        78.78,
+        10.07
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/sivaganga.geojson"
+    },
+    "Virudhunagar": {
+      "name": "Virudhunagar Urban Area",
+      "district": "Virudhunagar",
+      "crs": "EPSG:32644",
+      "bbox": [
+        77.33934,
+        9.20195,
+        78.42954,
+        9.78642
+      ],
+      "center": [
+        77.96,
+        9.59
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "boundary": "boundaries/virudhunagar.geojson",
+      "area_km2": 4241.58
+    },
+    "Aruppukkottai": {
+      "name": "Aruppukkottai Weaving Core",
+      "district": "Virudhunagar",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.04,
+        9.45,
+        78.16,
+        9.57
+      ],
+      "center": [
+        78.1,
+        9.51
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/virudhunagar.geojson"
+    },
+    "Ramanathapuram": {
+      "name": "Ramanathapuram Coastal Area",
+      "district": "Ramanathapuram",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.2185,
+        9.09395,
+        79.34659,
+        9.94392
+      ],
+      "center": [
+        78.84,
+        9.37
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/ramanathapuram.geojson",
+      "area_km2": 4236.33
+    },
+    "Rameswaram": {
+      "name": "Rameswaram Island Coast",
+      "district": "Ramanathapuram",
+      "crs": "EPSG:32644",
+      "bbox": [
+        79.25,
+        9.23,
+        79.37,
+        9.35
+      ],
+      "center": [
+        79.31,
+        9.29
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/ramanathapuram.geojson"
+    },
+    "Paramakudi": {
+      "name": "Paramakudi Urban Area",
+      "district": "Ramanathapuram",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.53,
+        9.48,
+        78.65,
+        9.6
+      ],
+      "center": [
+        78.59,
+        9.54
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/ramanathapuram.geojson"
+    },
+    "Thoothukudi": {
+      "name": "Thoothukudi Port Core",
+      "district": "Thoothukudi",
+      "crs": "EPSG:32644",
+      "bbox": [
+        77.67398,
+        8.32441,
+        78.38524,
+        9.36846
+      ],
+      "center": [
+        78.14,
+        8.81
+      ],
+      "zoom": 13,
+      "tiles": [
+        "43P",
+        "44P"
+      ],
+      "boundary": "boundaries/thoothukudi.geojson",
+      "area_km2": 4673.35
+    },
+    "Tiruchendur": {
+      "name": "Tiruchendur Coastal Basin",
+      "district": "Thoothukudi",
+      "crs": "EPSG:32644",
+      "bbox": [
+        78.06,
+        8.43,
+        78.18,
+        8.55
+      ],
+      "center": [
+        78.12,
+        8.49
+      ],
+      "zoom": 13,
+      "tiles": [
+        "44P"
+      ],
+      "boundary": "boundaries/thoothukudi.geojson"
+    },
+    "Pallavaram": {
+      "name": "Pallavaram",
+      "state": "Tamil Nadu",
+      "district": "Chengalpattu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        80.10068,
+        12.93671,
+        80.19379,
+        12.99762
+      ],
+      "boundary": "boundaries/pallavaram.geojson",
+      "center": [
+        80.1472,
+        12.9672
+      ],
+      "area_km2": 41.1
+    },
+    "Poonamallee": {
+      "name": "Poonamallee",
+      "state": "Tamil Nadu",
+      "district": "Tiruvallur",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.97594,
+        13.01545,
+        80.16319,
+        13.10586
+      ],
+      "boundary": "boundaries/poonamallee.geojson",
+      "center": [
+        80.0696,
+        13.0607
+      ],
+      "area_km2": 118.26
+    },
+    "Kundrathur": {
+      "name": "Kundrathur",
+      "state": "Tamil Nadu",
+      "district": "Kanchipuram",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.90271,
+        12.78445,
+        80.16365,
+        13.04499
+      ],
+      "boundary": "boundaries/kundrathur.geojson",
+      "center": [
+        80.0332,
+        12.9147
+      ],
+      "area_km2": 271.59
+    },
+    "Chennai Metropolitan Area": {
+      "name": "Chennai Metropolitan Area",
+      "state": "Tamil Nadu",
+      "tiles": [
+        "44P"
+      ],
+      "bbox": [
+        79.97594,
+        12.85008,
+        80.30095,
+        13.2031
+      ],
+      "boundary": "boundaries/chennai_cma.geojson",
+      "center": [
+        80.1384,
+        13.0266
+      ],
+      "area_km2": 705.84
+    }
+  }
+}

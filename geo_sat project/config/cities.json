@@ -1,0 +1,440 @@
+{
+    "TinyMumbai": {
+        "city_id": "tinymumbai",
+        "bbox": [
+            72.84,
+            19.04,
+            72.87,
+            19.07
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "TinyChennai": {
+        "city_id": "tinychennai",
+        "bbox": [
+            80.25,
+            13.0,
+            80.28,
+            13.03
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "Mumbai": {
+        "city_id": "mumbai",
+        "bbox": [
+            72.7092035,
+            18.894999,
+            73.0292035,
+            19.214999
+        ],
+        "default_years": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+        ],
+        "boundary": {
+            "type": "municipal_city_bbox",
+            "source": "OpenStreetMap Nominatim"
+        }
+    },
+    "Delhi": {
+        "city_id": "delhi",
+        "bbox": [
+            76.8388351,
+            28.4046285,
+            77.3453379,
+            28.8834464
+        ],
+        "default_years": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+        ],
+        "boundary": {
+            "type": "municipal_city_bbox",
+            "source": "OpenStreetMap Nominatim"
+        }
+    },
+    "Bengaluru": {
+        "city_id": "bengaluru",
+        "bbox": [
+            77.4598797,
+            12.8334905,
+            77.7840639,
+            13.1426196
+        ],
+        "default_years": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+        ],
+        "boundary": {
+            "type": "municipal_city_bbox",
+            "source": "OpenStreetMap Nominatim"
+        }
+    },
+    "Coimbatore": {
+        "city_id": "coimbatore",
+        "bbox": [
+            76.8028425,
+            10.8418115,
+            77.1228425,
+            11.1618115
+        ],
+        "default_years": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+        ],
+        "boundary": {
+            "type": "municipal_city_bbox",
+            "source": "OpenStreetMap Nominatim"
+        }
+    },
+    "Madurai": {
+        "city_id": "madurai",
+        "bbox": [
+            78.02,
+            9.82,
+            78.22,
+            10.02
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "Tiruchirappalli": {
+        "city_id": "tiruchirappalli",
+        "bbox": [
+            78.60,
+            10.69,
+            78.80,
+            10.89
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "Salem": {
+        "city_id": "salem",
+        "bbox": [
+            78.04,
+            11.56,
+            78.24,
+            11.76
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "Kanchipuram": {
+        "city_id": "kanchipuram",
+        "bbox": [
+            79.60,
+            12.73,
+            79.80,
+            12.93
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "Chennai": {
+        "city_id": "chennai",
+        "bbox": [
+            80.13,
+            12.85,
+            80.34,
+            13.24
+        ],
+        "default_years": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+        ],
+        "boundary": {
+            "type": "municipal_city_bbox",
+            "source": "OpenStreetMap Nominatim",
+            "note": "Reference ROI retained from existing implementation"
+        }
+    },
+    "Hyderabad": {
+        "city_id": "hyderabad",
+        "bbox": [
+            78.2387067,
+            17.2916377,
+            78.6223912,
+            17.5608321
+        ],
+        "default_years": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+        ],
+        "boundary": {
+            "type": "municipal_city_bbox",
+            "source": "OpenStreetMap Nominatim"
+        }
+    },
+    "Kolkata": {
+        "city_id": "kolkata",
+        "bbox": [
+            88.2421429,
+            22.4335321,
+            88.4589549,
+            22.6325679
+        ],
+        "default_years": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+        ],
+        "boundary": {
+            "type": "municipal_city_bbox",
+            "source": "OpenStreetMap Nominatim"
+        }
+    },
+    "Pune": {
+        "city_id": "pune",
+        "bbox": [
+            73.6945071,
+            18.3613738,
+            74.0145071,
+            18.6813738
+        ],
+        "default_years": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+        ],
+        "boundary": {
+            "type": "municipal_city_bbox",
+            "source": "OpenStreetMap Nominatim"
+        }
+    },
+    "Ahmedabad": {
+        "city_id": "ahmedabad",
+        "bbox": [
+            72.4200568,
+            22.8615374,
+            72.7400568,
+            23.1815374
+        ],
+        "default_years": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+        ],
+        "boundary": {
+            "type": "municipal_city_bbox",
+            "source": "OpenStreetMap Nominatim"
+        }
+    },
+    "Jaipur": {
+        "city_id": "jaipur",
+        "bbox": [
+            75.6589817,
+            26.7554576,
+            75.9789817,
+            27.0754576
+        ],
+        "default_years": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+        ],
+        "boundary": {
+            "type": "municipal_city_bbox",
+            "source": "OpenStreetMap Nominatim"
+        }
+    },
+    "Surat": {
+        "city_id": "surat",
+        "bbox": [
+            72.6717058,
+            21.0494892,
+            72.9917058,
+            21.3694892
+        ],
+        "default_years": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+        ],
+        "boundary": {
+            "type": "municipal_city_bbox",
+            "source": "OpenStreetMap Nominatim"
+        }
+    },
+    "Kochi": {
+        "city_id": "kochi",
+        "bbox": [
+            76.2,
+            9.9,
+            76.4,
+            10.1
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "TinyDelhi": {
+        "city_id": "tinydelhi",
+        "bbox": [
+            77.14,
+            28.59,
+            77.17,
+            28.62
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "TinyBengaluru": {
+        "city_id": "tinybengaluru",
+        "bbox": [
+            77.64,
+            12.99,
+            77.67,
+            13.02
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "TinyHyderabad": {
+        "city_id": "tinyhyderabad",
+        "bbox": [
+            78.44,
+            17.39,
+            78.47,
+            17.42
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "TinyKolkata": {
+        "city_id": "tinykolkata",
+        "bbox": [
+            88.34,
+            22.54,
+            88.37,
+            22.57
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "TinyPune": {
+        "city_id": "tinypune",
+        "bbox": [
+            73.84,
+            18.54,
+            73.87,
+            18.57
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "TinyAhmedabad": {
+        "city_id": "tinyahmedabad",
+        "bbox": [
+            72.59,
+            23.04,
+            72.62,
+            23.07
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "TinyJaipur": {
+        "city_id": "tinyjaipur",
+        "bbox": [
+            75.79,
+            26.89,
+            75.82,
+            26.92
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    },
+    "TinyKochi": {
+        "city_id": "tinykochi",
+        "bbox": [
+            76.29,
+            9.99,
+            76.32,
+            10.02
+        ],
+        "default_years": [
+            2019,
+            2023
+        ]
+    }
+}
