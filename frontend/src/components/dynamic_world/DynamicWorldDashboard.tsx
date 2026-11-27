@@ -328,7 +328,7 @@ export const DynamicWorldDashboard: React.FC<{ initialCity?: string }> = ({ init
       {/* RIGHT: Large Interactive Map & Bottom Analytical Cards (approx 72–75%) */}
       <div className="flex-1 min-w-0 w-full flex flex-col gap-6">
         {/* Large Leaflet Map Workspace */}
-        <div className="relative w-full h-[540px] md:h-[600px] xl:h-[660px]">
+        <div className="relative w-full h-[380px] sm:h-[480px] md:h-[600px] xl:h-[660px]">
           {activeLayer ? (
             <DynamicWorldMap
               city={selectedCity}
@@ -348,7 +348,7 @@ export const DynamicWorldDashboard: React.FC<{ initialCity?: string }> = ({ init
               }}
             >
               {/* Floating Dynamic World Legend in Upper-Right */}
-              <div className="absolute top-4 right-4 z-[400]">
+              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-[400]">
                 <DynamicWorldLegend
                   mode={isSwipeMode ? 'swipe' : activeLayer.type}
                   classDefs={classDefs}

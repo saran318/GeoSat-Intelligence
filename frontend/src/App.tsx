@@ -136,7 +136,7 @@ export const App: React.FC = () => {
         <Navbar activeTab={activeTab} setActiveTab={navigate} />
 
         {/* Main Container */}
-        <main className={`relative z-10 py-8 px-4 sm:px-6 lg:px-8 mx-auto font-sans ${isUtility ? 'max-w-4xl' : 'max-w-[1700px]'}`}>
+        <main className={`relative z-10 py-5 sm:py-8 px-3 sm:px-6 lg:px-8 mx-auto font-sans ${isUtility ? 'max-w-4xl' : 'max-w-[1700px]'}`}>
           {!isUtility && activeTab !== '404' && health?.status === 'offline' && (
             <div className="mb-6">
               <ApiOfflineBanner

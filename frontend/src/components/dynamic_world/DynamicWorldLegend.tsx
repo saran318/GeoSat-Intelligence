@@ -22,7 +22,9 @@ export const DynamicWorldLegend: React.FC<DynamicWorldLegendProps> = ({
   onHoverClass,
   onIsolateClass,
 }) => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(() =>
+    typeof window !== 'undefined' ? window.innerWidth < 640 : false
+  );
   const classMap = useMemo(() => buildClassMap(classDefs), [classDefs]);
 
   const getTitle = () => {
@@ -32,7 +34,7 @@ export const DynamicWorldLegend: React.FC<DynamicWorldLegendProps> = ({
   };
 
   return (
-    <div className="bg-card/95 dark:bg-card/90 backdrop-blur-md border border-border/80 rounded-2xl shadow-lg p-3.5 w-60 select-none transition-all font-sans">
+    <div className="bg-card/95 dark:bg-card/90 backdrop-blur-md border border-border/80 rounded-2xl shadow-lg p-2.5 sm:p-3.5 w-48 sm:w-60 max-w-[calc(100vw-2.5rem)] select-none transition-all font-sans">
       {/* Header with Collapse Toggle */}
       <div
         className="flex items-center justify-between cursor-pointer group"

@@ -285,7 +285,7 @@ export const DynamicWorldMap: React.FC<DynamicWorldMapProps> = ({
     <div
       ref={containerRef}
       onPointerMove={onPointerMoveContainer}
-      className="w-full h-full min-h-[500px] lg:min-h-[580px] xl:min-h-[640px] relative rounded-2xl overflow-hidden border border-border/80 bg-background shadow-xs select-none"
+      className="w-full h-full min-h-[380px] sm:min-h-[480px] lg:min-h-[580px] xl:min-h-[640px] relative rounded-2xl overflow-hidden border border-border/80 bg-background shadow-xs select-none"
     >
       {/* Loading Indicator */}
       {isLoadingCurrent && (
@@ -384,7 +384,7 @@ export const DynamicWorldMap: React.FC<DynamicWorldMapProps> = ({
       {isSwipeMode && (
         <>
           {/* Top-left comparison year (From-year left) */}
-          <div className="absolute top-4 left-4 z-[400] bg-card/95 backdrop-blur-md text-foreground px-3 py-1.5 rounded-xl border border-border/80 shadow-md pointer-events-none select-none">
+          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-[400] bg-card/95 backdrop-blur-md text-foreground px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl border border-border/80 shadow-md pointer-events-none select-none">
             <div className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-primary" />
               <span className="text-xs font-bold font-mono tracking-tight text-foreground leading-tight">
@@ -414,7 +414,7 @@ export const DynamicWorldMap: React.FC<DynamicWorldMapProps> = ({
             ref={handleRef}
             onPointerDown={onPointerDownHandle}
             onPointerUp={onPointerUpHandle}
-            className="absolute top-0 bottom-0 w-[2px] bg-white z-[400] flex items-center justify-center cursor-ew-resize select-none"
+            className="absolute top-0 bottom-0 w-[2px] bg-white z-[400] flex items-center justify-center cursor-ew-resize select-none touch-none"
             style={{
               left: `${currentSliderPos}%`,
               boxShadow: '0 0 10px rgba(0, 0, 0, 0.45)',
@@ -434,7 +434,7 @@ export const DynamicWorldMap: React.FC<DynamicWorldMapProps> = ({
 
       {/* Floating Active Highlight/Isolate Banner (Item 5) */}
       {activeFocusClass !== null && activeFocusClass !== undefined && DYNAMIC_WORLD_CLASSES[activeFocusClass] && (
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[450] bg-slate-900/90 backdrop-blur-md text-white px-3.5 py-1.5 rounded-xl border border-white/20 shadow-xl flex items-center gap-2 font-mono text-xs animate-fadeIn">
+        <div className="absolute bottom-4 left-3 right-16 sm:right-auto sm:bottom-6 sm:left-1/2 sm:-translate-x-1/2 z-[450] bg-slate-900/90 backdrop-blur-md text-white px-3 sm:px-3.5 py-1.5 rounded-xl border border-white/20 shadow-xl flex items-center justify-between sm:justify-start gap-2 font-mono text-xs animate-fadeIn">
           <span
             className="w-3 h-3 rounded-xs shrink-0 border border-white/30"
             style={{ backgroundColor: DYNAMIC_WORLD_CLASSES[activeFocusClass].color }}

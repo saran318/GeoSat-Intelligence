@@ -52,9 +52,9 @@ export const RegionSelector: React.FC<RegionSelectorProps> = ({
   };
 
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
+    <div className={`flex flex-wrap sm:flex-nowrap items-center gap-2 ${className}`}>
       {/* District Dropdown */}
-      <div className="relative flex-1 min-w-[160px]">
+      <div className="relative flex-1 min-w-0">
         <select
           aria-label="Select region"
           value={value}
@@ -84,7 +84,7 @@ export const RegionSelector: React.FC<RegionSelectorProps> = ({
           <Search className="h-4 w-4" />
         </button>
       ) : (
-        <div className="relative w-40 shrink-0">
+        <div className="relative w-full sm:w-40 shrink-0">
           <Search className="h-3.5 w-3.5 text-muted-foreground absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
           <input
             ref={inputRef}
