@@ -1251,6 +1251,18 @@
       "norm_label": "get_boundary()"
     },
     {
+      "label": "get_overview_summary()",
+      "file_type": "code",
+      "source_file": "geo_sat project/app/api/dynamic_world.py",
+      "source_location": "L45",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_app_api_dynamic_world_get_overview_summary",
+      "community": 0,
+      "community_name": "EsriService",
+      "norm_label": "get_overview_summary()"
+    },
+    {
       "label": "_r2_preview_exists()",
       "file_type": "code",
       "source_file": "geo_sat project/app/api/dynamic_world.py",
@@ -1885,18 +1897,6 @@
       "community": 1,
       "community_name": "DynamicWorldService",
       "norm_label": "get_metadata()"
-    },
-    {
-      "label": "get_overview_summary()",
-      "file_type": "code",
-      "source_file": "geo_sat project/app/api/dynamic_world.py",
-      "source_location": "L45",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_app_api_dynamic_world_get_overview_summary",
-      "community": 1,
-      "community_name": "DynamicWorldService",
-      "norm_label": "get_overview_summary()"
     },
     {
       "label": "get_preview()",
@@ -2595,6 +2595,66 @@
       "norm_label": "print_mem()"
     },
     {
+      "label": "download_model_weights_if_missing()",
+      "file_type": "code",
+      "source_file": "geo_sat project/utils.py",
+      "source_location": "L58",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_download_model_weights_if_missing",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "download_model_weights_if_missing()"
+    },
+    {
+      "label": "find_sentinel_bands()",
+      "file_type": "code",
+      "source_file": "geo_sat project/utils.py",
+      "source_location": "L128",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_find_sentinel_bands",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "find_sentinel_bands()"
+    },
+    {
+      "label": "get_logger()",
+      "file_type": "code",
+      "source_file": "geo_sat project/utils.py",
+      "source_location": "L31",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_get_logger",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "get_logger()"
+    },
+    {
+      "label": "get_raster_wgs84_bounds()",
+      "file_type": "code",
+      "source_file": "geo_sat project/utils.py",
+      "source_location": "L95",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_get_raster_wgs84_bounds",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "get_raster_wgs84_bounds()"
+    },
+    {
+      "label": "process_bands_array()",
+      "file_type": "code",
+      "source_file": "geo_sat project/utils.py",
+      "source_location": "L203",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_process_bands_array",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "process_bands_array()"
+    },
+    {
       "label": "checkHealth()",
       "file_type": "code",
       "source_file": "frontend/src/api/client.ts",
@@ -2703,18 +2763,6 @@
       "norm_label": "section()"
     },
     {
-      "label": "analyze_change_detection()",
-      "file_type": "code",
-      "source_file": "geo_sat project/app/services/backend_client.py",
-      "source_location": "L170",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_app_services_backend_client_analyze_change_detection",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "analyze_change_detection()"
-    },
-    {
       "label": "classify_satellite_tile()",
       "file_type": "code",
       "source_file": "geo_sat project/app/services/backend_client.py",
@@ -2821,138 +2869,6 @@
       "community": 2,
       "community_name": "backend_client.py",
       "norm_label": "validate_and_preprocess_uploaded_file()"
-    },
-    {
-      "label": "colorize_class_map()",
-      "file_type": "code",
-      "source_file": "geo_sat project/run_real_pipeline.py",
-      "source_location": "L35",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_run_real_pipeline_colorize_class_map",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "colorize_class_map()"
-    },
-    {
-      "label": "run_pipeline()",
-      "file_type": "code",
-      "source_file": "geo_sat project/run_real_pipeline.py",
-      "source_location": "L72",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_run_real_pipeline_run_pipeline",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "run_pipeline()"
-    },
-    {
-      "label": "align_and_load_rasters()",
-      "file_type": "code",
-      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
-      "source_location": "L20",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_diff_maps_align_and_load_rasters",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "align_and_load_rasters()"
-    },
-    {
-      "label": "compute_change_detection()",
-      "file_type": "code",
-      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
-      "source_location": "L144",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_diff_maps_compute_change_detection",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "compute_change_detection()"
-    },
-    {
-      "label": "export_change_geotiff()",
-      "file_type": "code",
-      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
-      "source_location": "L105",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_diff_maps_export_change_geotiff",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "export_change_geotiff()"
-    },
-    {
-      "label": "calculate_pixel_area()",
-      "file_type": "code",
-      "source_file": "geo_sat project/src/change_detection/stats.py",
-      "source_location": "L24",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_stats_calculate_pixel_area",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "calculate_pixel_area()"
-    },
-    {
-      "label": "compute_landcover_area_stats()",
-      "file_type": "code",
-      "source_file": "geo_sat project/src/change_detection/stats.py",
-      "source_location": "L80",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_stats_compute_landcover_area_stats",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "compute_landcover_area_stats()"
-    },
-    {
-      "label": "export_area_stats_csv()",
-      "file_type": "code",
-      "source_file": "geo_sat project/src/change_detection/stats.py",
-      "source_location": "L155",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_stats_export_area_stats_csv",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "export_area_stats_csv()"
-    },
-    {
-      "label": "plot_area_comparison()",
-      "file_type": "code",
-      "source_file": "geo_sat project/src/change_detection/stats.py",
-      "source_location": "L172",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_stats_plot_area_comparison",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "plot_area_comparison()"
-    },
-    {
-      "label": "plot_transition_matrix()",
-      "file_type": "code",
-      "source_file": "geo_sat project/src/change_detection/stats.py",
-      "source_location": "L211",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_stats_plot_transition_matrix",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "plot_transition_matrix()"
-    },
-    {
-      "label": "load_inference_model()",
-      "file_type": "code",
-      "source_file": "geo_sat project/src/inference/predict.py",
-      "source_location": "L26",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_src_inference_predict_load_inference_model",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "load_inference_model()"
     },
     {
       "label": "stitch_predictions()",
@@ -3183,64 +3099,52 @@
       "norm_label": "useregionyearparams()"
     },
     {
-      "label": "download_model_weights_if_missing()",
+      "label": "analyze_change_detection()",
       "file_type": "code",
-      "source_file": "geo_sat project/utils.py",
-      "source_location": "L53",
+      "source_file": "geo_sat project/app/services/backend_client.py",
+      "source_location": "L170",
       "_callable": true,
       "_origin": "ast",
-      "id": "geo_sat_project_utils_download_model_weights_if_missing",
+      "id": "geo_sat_project_app_services_backend_client_analyze_change_detection",
       "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "download_model_weights_if_missing()"
+      "community_name": "compute_change_detection",
+      "norm_label": "analyze_change_detection()"
     },
     {
-      "label": "find_sentinel_bands()",
+      "label": "align_and_load_rasters()",
       "file_type": "code",
-      "source_file": "geo_sat project/utils.py",
-      "source_location": "L123",
+      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
+      "source_location": "L20",
       "_callable": true,
       "_origin": "ast",
-      "id": "geo_sat_project_utils_find_sentinel_bands",
+      "id": "geo_sat_project_src_change_detection_diff_maps_align_and_load_rasters",
       "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "find_sentinel_bands()"
+      "community_name": "compute_change_detection",
+      "norm_label": "align_and_load_rasters()"
     },
     {
-      "label": "get_logger()",
+      "label": "compute_change_detection()",
       "file_type": "code",
-      "source_file": "geo_sat project/utils.py",
-      "source_location": "L26",
+      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
+      "source_location": "L144",
       "_callable": true,
       "_origin": "ast",
-      "id": "geo_sat_project_utils_get_logger",
+      "id": "geo_sat_project_src_change_detection_diff_maps_compute_change_detection",
       "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "get_logger()"
+      "community_name": "compute_change_detection",
+      "norm_label": "compute_change_detection()"
     },
     {
-      "label": "get_raster_wgs84_bounds()",
+      "label": "export_change_geotiff()",
       "file_type": "code",
-      "source_file": "geo_sat project/utils.py",
-      "source_location": "L90",
+      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
+      "source_location": "L105",
       "_callable": true,
       "_origin": "ast",
-      "id": "geo_sat_project_utils_get_raster_wgs84_bounds",
+      "id": "geo_sat_project_src_change_detection_diff_maps_export_change_geotiff",
       "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "get_raster_wgs84_bounds()"
-    },
-    {
-      "label": "process_bands_array()",
-      "file_type": "code",
-      "source_file": "geo_sat project/utils.py",
-      "source_location": "L198",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "geo_sat_project_utils_process_bands_array",
-      "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "process_bands_array()"
+      "community_name": "compute_change_detection",
+      "norm_label": "export_change_geotiff()"
     },
     {
       "label": ".eq()",
@@ -3375,6 +3279,42 @@
       "norm_label": "test_overview_summary_falls_back_only_for_missing_district_year()"
     },
     {
+      "label": "colorize_class_map()",
+      "file_type": "code",
+      "source_file": "geo_sat project/run_real_pipeline.py",
+      "source_location": "L35",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_run_real_pipeline_colorize_class_map",
+      "community": 26,
+      "community_name": "run_real_pipeline.py",
+      "norm_label": "colorize_class_map()"
+    },
+    {
+      "label": "run_pipeline()",
+      "file_type": "code",
+      "source_file": "geo_sat project/run_real_pipeline.py",
+      "source_location": "L72",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_run_real_pipeline_run_pipeline",
+      "community": 26,
+      "community_name": "run_real_pipeline.py",
+      "norm_label": "run_pipeline()"
+    },
+    {
+      "label": "export_area_stats_csv()",
+      "file_type": "code",
+      "source_file": "geo_sat project/src/change_detection/stats.py",
+      "source_location": "L155",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_stats_export_area_stats_csv",
+      "community": 26,
+      "community_name": "run_real_pipeline.py",
+      "norm_label": "export_area_stats_csv()"
+    },
+    {
       "label": "classify_tile()",
       "file_type": "code",
       "source_file": "geo_sat project/src/inference/predict.py",
@@ -3383,8 +3323,20 @@
       "_origin": "ast",
       "id": "geo_sat_project_src_inference_predict_classify_tile",
       "community": 26,
-      "community_name": "classify_tile",
+      "community_name": "run_real_pipeline.py",
       "norm_label": "classify_tile()"
+    },
+    {
+      "label": "load_inference_model()",
+      "file_type": "code",
+      "source_file": "geo_sat project/src/inference/predict.py",
+      "source_location": "L26",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_src_inference_predict_load_inference_model",
+      "community": 26,
+      "community_name": "run_real_pipeline.py",
+      "norm_label": "load_inference_model()"
     },
     {
       "label": "predict()",
@@ -3395,7 +3347,7 @@
       "_origin": "ast",
       "id": "geo_sat_project_src_inference_predict_predict",
       "community": 26,
-      "community_name": "classify_tile",
+      "community_name": "run_real_pipeline.py",
       "norm_label": "predict()"
     },
     {
@@ -3407,7 +3359,7 @@
       "_origin": "ast",
       "id": "geo_sat_project_src_inference_predict_preprocess_image",
       "community": 26,
-      "community_name": "classify_tile",
+      "community_name": "run_real_pipeline.py",
       "norm_label": "preprocess_image()"
     },
     {
@@ -3419,7 +3371,7 @@
       "_origin": "ast",
       "id": "geo_sat_project_src_inference_predict_run_single_inference",
       "community": 26,
-      "community_name": "classify_tile",
+      "community_name": "run_real_pipeline.py",
       "norm_label": "run_single_inference()"
     },
     {
@@ -4923,6 +4875,66 @@
       "norm_label": "test_r2_s3_head_object_hit_and_miss()"
     },
     {
+      "label": "calculate_pixel_area()",
+      "file_type": "code",
+      "source_file": "geo_sat project/src/change_detection/stats.py",
+      "source_location": "L24",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_stats_calculate_pixel_area",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "calculate_pixel_area()"
+    },
+    {
+      "label": "compute_landcover_area_stats()",
+      "file_type": "code",
+      "source_file": "geo_sat project/src/change_detection/stats.py",
+      "source_location": "L80",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_stats_compute_landcover_area_stats",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "compute_landcover_area_stats()"
+    },
+    {
+      "label": "plot_area_comparison()",
+      "file_type": "code",
+      "source_file": "geo_sat project/src/change_detection/stats.py",
+      "source_location": "L172",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_stats_plot_area_comparison",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "plot_area_comparison()"
+    },
+    {
+      "label": "plot_transition_matrix()",
+      "file_type": "code",
+      "source_file": "geo_sat project/src/change_detection/stats.py",
+      "source_location": "L211",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_stats_plot_transition_matrix",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "plot_transition_matrix()"
+    },
+    {
+      "label": "test_utils_and_app_import_without_torch()",
+      "file_type": "code",
+      "source_file": "geo_sat project/tests/test_optional_torch.py",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "geo_sat_project_tests_test_optional_torch_test_utils_and_app_import_without_torch",
+      "community": 78,
+      "community_name": "test_utils_and_app_import_without_torch",
+      "norm_label": "test_utils_and_app_import_without_torch()"
+    },
+    {
       "label": "api/esri.py",
       "file_type": "code",
       "source_file": "geo_sat project/app/api/esri.py",
@@ -5042,6 +5054,17 @@
       "community": 0,
       "community_name": "EsriService",
       "norm_label": "returns the geojson polygon boundary for the requested city or district."
+    },
+    {
+      "label": "Returns real statewide 2019-2025 Tamil Nadu snapshot, top movers, and config\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/app/api/dynamic_world.py",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "geo_sat_project_app_api_dynamic_world_rationale_46",
+      "community": 0,
+      "community_name": "EsriService",
+      "norm_label": "returns real statewide 2019-2025 tamil nadu snapshot, top movers, and config..."
     },
     {
       "label": "Computes fast windowed area stats for a specific hierarchy level and year.",
@@ -5350,17 +5373,6 @@
       "community": 1,
       "community_name": "DynamicWorldService",
       "norm_label": "lock"
-    },
-    {
-      "label": "Returns real statewide 2019-2025 Tamil Nadu snapshot, top movers, and config\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/app/api/dynamic_world.py",
-      "source_location": "L46",
-      "_origin": "ast",
-      "id": "geo_sat_project_app_api_dynamic_world_rationale_46",
-      "community": 1,
-      "community_name": "DynamicWorldService",
-      "norm_label": "returns real statewide 2019-2025 tamil nadu snapshot, top movers, and config..."
     },
     {
       "label": "Returns a stable cache-key identifier for local files or presigned /vsicurl/\u2026",
@@ -7110,6 +7122,61 @@
       "norm_label": "test_pipeline.py"
     },
     {
+      "label": "utils.py",
+      "file_type": "code",
+      "source_file": "geo_sat project/utils.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geo_sat_project_utils",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "utils.py"
+    },
+    {
+      "label": "Any",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_py_any",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "any"
+    },
+    {
+      "label": "ndarray",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_py_ndarray",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "ndarray"
+    },
+    {
+      "label": "Tensor",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_py_tensor",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "tensor"
+    },
+    {
+      "label": "Logger",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "logger",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "logger"
+    },
+    {
       "label": "Window",
       "file_type": "code",
       "source_file": "",
@@ -7196,6 +7263,72 @@
       "community": 17,
       "community_name": "extract_patches",
       "norm_label": "applies cloud and shadow masking based on sentinel-2 scene classification layer..."
+    },
+    {
+      "label": "Utility functions for the Person 2 Backend & Inference module. Provides\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/utils.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_rationale_1",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "utility functions for the person 2 backend & inference module. provides..."
+    },
+    {
+      "label": "Scans a directory for the required Sentinel-2 band files (B2, B3, B4, B8).\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/utils.py",
+      "source_location": "L129",
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_rationale_129",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "scans a directory for the required sentinel-2 band files (b2, b3, b4, b8)...."
+    },
+    {
+      "label": "Applies the common preprocessing pipeline to a raw stacked band array.\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/utils.py",
+      "source_location": "L204",
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_rationale_204",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "applies the common preprocessing pipeline to a raw stacked band array...."
+    },
+    {
+      "label": "Initializes and returns a configured logger instance. Args: name (str): Name of\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/utils.py",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_rationale_32",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "initializes and returns a configured logger instance. args: name (str): name of..."
+    },
+    {
+      "label": "Downloads trained ResNet50 model weights from GitHub Releases if missing\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/utils.py",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_rationale_62",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "downloads trained resnet50 model weights from github releases if missing..."
+    },
+    {
+      "label": "Calculates geographic bounding box coordinates in WGS84 (EPSG:4326) [min_lon,\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/utils.py",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "geo_sat_project_utils_rationale_96",
+      "community": 17,
+      "community_name": "extract_patches",
+      "norm_label": "calculates geographic bounding box coordinates in wgs84 (epsg:4326) [min_lon,..."
     },
     {
       "label": "components.json",
@@ -7462,50 +7595,6 @@
       "norm_label": "privacypage.tsx"
     },
     {
-      "label": "Affine",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "affine",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "affine"
-    },
-    {
-      "label": "CRS",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "crs",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "crs"
-    },
-    {
-      "label": "DataFrame",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "dataframe",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "dataframe"
-    },
-    {
-      "label": "Figure",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "figure",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "figure"
-    },
-    {
       "label": "backend_client.py",
       "file_type": "code",
       "source_file": "geo_sat project/app/services/backend_client.py",
@@ -7548,116 +7637,6 @@
       "community": 2,
       "community_name": "backend_client.py",
       "norm_label": "tensor"
-    },
-    {
-      "label": "geo_sat project/change_detection/diff_maps.py",
-      "file_type": "code",
-      "source_file": "geo_sat project/change_detection/diff_maps.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "geo_sat_project_change_detection_diff_maps",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "geo_sat project/change_detection/diff_maps.py"
-    },
-    {
-      "label": "geo_sat project/change_detection/__init__.py",
-      "file_type": "code",
-      "source_file": "geo_sat project/change_detection/__init__.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "geo_sat_project_change_detection_init",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "geo_sat project/change_detection/__init__.py"
-    },
-    {
-      "label": "geo_sat project/change_detection/stats.py",
-      "file_type": "code",
-      "source_file": "geo_sat project/change_detection/stats.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "geo_sat_project_change_detection_stats",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "geo_sat project/change_detection/stats.py"
-    },
-    {
-      "label": "run_real_pipeline.py",
-      "file_type": "code",
-      "source_file": "geo_sat project/run_real_pipeline.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "geo_sat_project_run_real_pipeline",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "run_real_pipeline.py"
-    },
-    {
-      "label": "src/change_detection/diff_maps.py",
-      "file_type": "code",
-      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_diff_maps",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "src/change_detection/diff_maps.py"
-    },
-    {
-      "label": "Any",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_diff_maps_py_any",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "any"
-    },
-    {
-      "label": "ndarray",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_diff_maps_py_ndarray",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "ndarray"
-    },
-    {
-      "label": "src/change_detection/__init__.py",
-      "file_type": "code",
-      "source_file": "geo_sat project/src/change_detection/__init__.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_init",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "src/change_detection/__init__.py"
-    },
-    {
-      "label": "src/change_detection/stats.py",
-      "file_type": "code",
-      "source_file": "geo_sat project/src/change_detection/stats.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_stats",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "src/change_detection/stats.py"
-    },
-    {
-      "label": "ndarray",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_stats_py_ndarray",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "ndarray"
     },
     {
       "label": "post",
@@ -7726,17 +7705,6 @@
       "norm_label": "tile-level classification endpoint."
     },
     {
-      "label": "Multi-temporal land cover change detection endpoint.",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/app/services/backend_client.py",
-      "source_location": "L176",
-      "_origin": "ast",
-      "id": "geo_sat_project_app_services_backend_client_rationale_176",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "multi-temporal land cover change detection endpoint."
-    },
-    {
       "label": "Returns a list of cities that have generated real data.",
       "file_type": "rationale",
       "source_file": "geo_sat project/app/services/backend_client.py",
@@ -7801,182 +7769,6 @@
       "community": 2,
       "community_name": "backend_client.py",
       "norm_label": "health check endpoint to verify backend status."
-    },
-    {
-      "label": "Change Detection - Difference Map Module Wrapper. Exposes diff map functions\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/change_detection/diff_maps.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "geo_sat_project_change_detection_diff_maps_rationale_1",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "change detection - difference map module wrapper. exposes diff map functions..."
-    },
-    {
-      "label": "Change Detection Module Top-level Package.",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/change_detection/__init__.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "geo_sat_project_change_detection_init_rationale_1",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "change detection module top-level package."
-    },
-    {
-      "label": "Change Detection - Statistics Module Wrapper. Exposes area statistics\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/change_detection/stats.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "geo_sat_project_change_detection_stats_rationale_1",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "change detection - statistics module wrapper. exposes area statistics..."
-    },
-    {
-      "label": "Converts a 1-band class index TIF into a colored PNG for the frontend.",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/run_real_pipeline.py",
-      "source_location": "L36",
-      "_origin": "ast",
-      "id": "geo_sat_project_run_real_pipeline_rationale_36",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "converts a 1-band class index tif into a colored png for the frontend."
-    },
-    {
-      "label": "Change Detection - Difference Map Generation Module. Compares consecutive or\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_diff_maps_rationale_1",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "change detection - difference map generation module. compares consecutive or..."
-    },
-    {
-      "label": "Exports binary change map and transition codes as a 2-band georeferenced\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
-      "source_location": "L111",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_diff_maps_rationale_111",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "exports binary change map and transition codes as a 2-band georeferenced..."
-    },
-    {
-      "label": "High-level function to run end-to-end change detection between two annual\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
-      "source_location": "L149",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_diff_maps_rationale_149",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "high-level function to run end-to-end change detection between two annual..."
-    },
-    {
-      "label": "Reads two GeoTIFF rasters and ensures they are perfectly aligned spatially. If\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_diff_maps_rationale_24",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "reads two geotiff rasters and ensures they are perfectly aligned spatially. if..."
-    },
-    {
-      "label": "Change Detection package for multi-temporal land cover raster analysis.\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/src/change_detection/__init__.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_init_rationale_1",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "change detection package for multi-temporal land cover raster analysis...."
-    },
-    {
-      "label": "Change Detection - Area Statistics and Visualization Module. Calculates pixel-\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/src/change_detection/stats.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_stats_rationale_1",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "change detection - area statistics and visualization module. calculates pixel-..."
-    },
-    {
-      "label": "Exports land cover area statistics DataFrame to CSV. Args: df_stats\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/src/change_detection/stats.py",
-      "source_location": "L156",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_stats_rationale_156",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "exports land cover area statistics dataframe to csv. args: df_stats..."
-    },
-    {
-      "label": "Generates a grouped bar chart comparing Year 1 vs Year 2 land cover area\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/src/change_detection/stats.py",
-      "source_location": "L176",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_stats_rationale_176",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "generates a grouped bar chart comparing year 1 vs year 2 land cover area..."
-    },
-    {
-      "label": "Generates a heatmap of class-to-class pixel transition count. Args:\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/src/change_detection/stats.py",
-      "source_location": "L216",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_stats_rationale_216",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "generates a heatmap of class-to-class pixel transition count. args:..."
-    },
-    {
-      "label": "Computes single pixel area in square meters from affine transform. Handles\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/src/change_detection/stats.py",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_stats_rationale_30",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "computes single pixel area in square meters from affine transform. handles..."
-    },
-    {
-      "label": "Computes class-wise land cover area statistics and 2D transition matrix. Args:\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/src/change_detection/stats.py",
-      "source_location": "L90",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_change_detection_stats_rationale_90",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "computes class-wise land cover area statistics and 2d transition matrix. args:..."
-    },
-    {
-      "label": "Instantiates the model architecture and populates it with trained weights.\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/src/inference/predict.py",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "geo_sat_project_src_inference_predict_rationale_32",
-      "community": 2,
-      "community_name": "backend_client.py",
-      "norm_label": "instantiates the model architecture and populates it with trained weights...."
     },
     {
       "label": "inference/__init__.py",
@@ -8254,15 +8046,37 @@
       "norm_label": "react"
     },
     {
-      "label": "utils.py",
+      "label": "geo_sat project/change_detection/diff_maps.py",
       "file_type": "code",
-      "source_file": "geo_sat project/utils.py",
+      "source_file": "geo_sat project/change_detection/diff_maps.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "geo_sat_project_utils",
+      "id": "geo_sat_project_change_detection_diff_maps",
       "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "utils.py"
+      "community_name": "compute_change_detection",
+      "norm_label": "geo_sat project/change_detection/diff_maps.py"
+    },
+    {
+      "label": "geo_sat project/change_detection/__init__.py",
+      "file_type": "code",
+      "source_file": "geo_sat project/change_detection/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geo_sat_project_change_detection_init",
+      "community": 23,
+      "community_name": "compute_change_detection",
+      "norm_label": "geo_sat project/change_detection/__init__.py"
+    },
+    {
+      "label": "src/change_detection/diff_maps.py",
+      "file_type": "code",
+      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_diff_maps",
+      "community": 23,
+      "community_name": "compute_change_detection",
+      "norm_label": "src/change_detection/diff_maps.py"
     },
     {
       "label": "Any",
@@ -8270,9 +8084,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "geo_sat_project_utils_py_any",
+      "id": "geo_sat_project_src_change_detection_diff_maps_py_any",
       "community": 23,
-      "community_name": "utils.py",
+      "community_name": "compute_change_detection",
       "norm_label": "any"
     },
     {
@@ -8281,98 +8095,109 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "geo_sat_project_utils_py_ndarray",
+      "id": "geo_sat_project_src_change_detection_diff_maps_py_ndarray",
       "community": 23,
-      "community_name": "utils.py",
+      "community_name": "compute_change_detection",
       "norm_label": "ndarray"
     },
     {
-      "label": "Tensor",
+      "label": "src/change_detection/__init__.py",
       "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "geo_sat_project_utils_py_tensor",
-      "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "tensor"
-    },
-    {
-      "label": "Logger",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "logger",
-      "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "logger"
-    },
-    {
-      "label": "Utility functions for the Person 2 Backend & Inference module. Provides\u2026",
-      "file_type": "rationale",
-      "source_file": "geo_sat project/utils.py",
+      "source_file": "geo_sat project/src/change_detection/__init__.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "geo_sat_project_utils_rationale_1",
+      "id": "geo_sat_project_src_change_detection_init",
       "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "utility functions for the person 2 backend & inference module. provides..."
+      "community_name": "compute_change_detection",
+      "norm_label": "src/change_detection/__init__.py"
     },
     {
-      "label": "Scans a directory for the required Sentinel-2 band files (B2, B3, B4, B8).\u2026",
+      "label": "Multi-temporal land cover change detection endpoint.",
       "file_type": "rationale",
-      "source_file": "geo_sat project/utils.py",
-      "source_location": "L124",
+      "source_file": "geo_sat project/app/services/backend_client.py",
+      "source_location": "L176",
       "_origin": "ast",
-      "id": "geo_sat_project_utils_rationale_124",
+      "id": "geo_sat_project_app_services_backend_client_rationale_176",
       "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "scans a directory for the required sentinel-2 band files (b2, b3, b4, b8)...."
+      "community_name": "compute_change_detection",
+      "norm_label": "multi-temporal land cover change detection endpoint."
     },
     {
-      "label": "Applies the common preprocessing pipeline to a raw stacked band array.\u2026",
+      "label": "Change Detection - Difference Map Module Wrapper. Exposes diff map functions\u2026",
       "file_type": "rationale",
-      "source_file": "geo_sat project/utils.py",
-      "source_location": "L199",
+      "source_file": "geo_sat project/change_detection/diff_maps.py",
+      "source_location": "L1",
       "_origin": "ast",
-      "id": "geo_sat_project_utils_rationale_199",
+      "id": "geo_sat_project_change_detection_diff_maps_rationale_1",
       "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "applies the common preprocessing pipeline to a raw stacked band array...."
+      "community_name": "compute_change_detection",
+      "norm_label": "change detection - difference map module wrapper. exposes diff map functions..."
     },
     {
-      "label": "Initializes and returns a configured logger instance. Args: name (str): Name of\u2026",
+      "label": "Change Detection Module Top-level Package.",
       "file_type": "rationale",
-      "source_file": "geo_sat project/utils.py",
-      "source_location": "L27",
+      "source_file": "geo_sat project/change_detection/__init__.py",
+      "source_location": "L1",
       "_origin": "ast",
-      "id": "geo_sat_project_utils_rationale_27",
+      "id": "geo_sat_project_change_detection_init_rationale_1",
       "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "initializes and returns a configured logger instance. args: name (str): name of..."
+      "community_name": "compute_change_detection",
+      "norm_label": "change detection module top-level package."
     },
     {
-      "label": "Downloads trained ResNet50 model weights from GitHub Releases if missing\u2026",
+      "label": "Change Detection - Difference Map Generation Module. Compares consecutive or\u2026",
       "file_type": "rationale",
-      "source_file": "geo_sat project/utils.py",
-      "source_location": "L57",
+      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
+      "source_location": "L1",
       "_origin": "ast",
-      "id": "geo_sat_project_utils_rationale_57",
+      "id": "geo_sat_project_src_change_detection_diff_maps_rationale_1",
       "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "downloads trained resnet50 model weights from github releases if missing..."
+      "community_name": "compute_change_detection",
+      "norm_label": "change detection - difference map generation module. compares consecutive or..."
     },
     {
-      "label": "Calculates geographic bounding box coordinates in WGS84 (EPSG:4326) [min_lon,\u2026",
+      "label": "Exports binary change map and transition codes as a 2-band georeferenced\u2026",
       "file_type": "rationale",
-      "source_file": "geo_sat project/utils.py",
-      "source_location": "L91",
+      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
+      "source_location": "L111",
       "_origin": "ast",
-      "id": "geo_sat_project_utils_rationale_91",
+      "id": "geo_sat_project_src_change_detection_diff_maps_rationale_111",
       "community": 23,
-      "community_name": "utils.py",
-      "norm_label": "calculates geographic bounding box coordinates in wgs84 (epsg:4326) [min_lon,..."
+      "community_name": "compute_change_detection",
+      "norm_label": "exports binary change map and transition codes as a 2-band georeferenced..."
+    },
+    {
+      "label": "High-level function to run end-to-end change detection between two annual\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
+      "source_location": "L149",
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_diff_maps_rationale_149",
+      "community": 23,
+      "community_name": "compute_change_detection",
+      "norm_label": "high-level function to run end-to-end change detection between two annual..."
+    },
+    {
+      "label": "Reads two GeoTIFF rasters and ensures they are perfectly aligned spatially. If\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/src/change_detection/diff_maps.py",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_diff_maps_rationale_24",
+      "community": 23,
+      "community_name": "compute_change_detection",
+      "norm_label": "reads two geotiff rasters and ensures they are perfectly aligned spatially. if..."
+    },
+    {
+      "label": "Change Detection package for multi-temporal land cover raster analysis.\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/src/change_detection/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_init_rationale_1",
+      "community": 23,
+      "community_name": "compute_change_detection",
+      "norm_label": "change detection package for multi-temporal land cover raster analysis...."
     },
     {
       "label": "test_overview_performance.py",
@@ -8560,8 +8385,19 @@
       "_origin": "ast",
       "id": "geo_sat_project_predict",
       "community": 26,
-      "community_name": "classify_tile",
+      "community_name": "run_real_pipeline.py",
       "norm_label": "geo_sat project/predict.py"
+    },
+    {
+      "label": "run_real_pipeline.py",
+      "file_type": "code",
+      "source_file": "geo_sat project/run_real_pipeline.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geo_sat_project_run_real_pipeline",
+      "community": 26,
+      "community_name": "run_real_pipeline.py",
+      "norm_label": "run_real_pipeline.py"
     },
     {
       "label": "Any",
@@ -8571,7 +8407,7 @@
       "_origin": "ast",
       "id": "geo_sat_project_src_inference_predict_py_any",
       "community": 26,
-      "community_name": "classify_tile",
+      "community_name": "run_real_pipeline.py",
       "norm_label": "any"
     },
     {
@@ -8582,7 +8418,7 @@
       "_origin": "ast",
       "id": "geo_sat_project_src_inference_predict_py_tensor",
       "community": 26,
-      "community_name": "classify_tile",
+      "community_name": "run_real_pipeline.py",
       "norm_label": "tensor"
     },
     {
@@ -8593,7 +8429,7 @@
       "_origin": "ast",
       "id": "module",
       "community": 26,
-      "community_name": "classify_tile",
+      "community_name": "run_real_pipeline.py",
       "norm_label": "module"
     },
     {
@@ -8604,8 +8440,30 @@
       "_origin": "ast",
       "id": "geo_sat_project_predict_rationale_1",
       "community": 26,
-      "community_name": "classify_tile",
+      "community_name": "run_real_pipeline.py",
       "norm_label": "predict module for sentinel-2 land-use classification. re-exports single patch..."
+    },
+    {
+      "label": "Converts a 1-band class index TIF into a colored PNG for the frontend.",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/run_real_pipeline.py",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "geo_sat_project_run_real_pipeline_rationale_36",
+      "community": 26,
+      "community_name": "run_real_pipeline.py",
+      "norm_label": "converts a 1-band class index tif into a colored png for the frontend."
+    },
+    {
+      "label": "Exports land cover area statistics DataFrame to CSV. Args: df_stats\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/src/change_detection/stats.py",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_stats_rationale_156",
+      "community": 26,
+      "community_name": "run_real_pipeline.py",
+      "norm_label": "exports land cover area statistics dataframe to csv. args: df_stats..."
     },
     {
       "label": "Finds Sentinel-2 bands in image_dir, loads them, normalizes, computes\u2026",
@@ -8615,7 +8473,7 @@
       "_origin": "ast",
       "id": "geo_sat_project_src_inference_predict_rationale_116",
       "community": 26,
-      "community_name": "classify_tile",
+      "community_name": "run_real_pipeline.py",
       "norm_label": "finds sentinel-2 bands in image_dir, loads them, normalizes, computes..."
     },
     {
@@ -8626,7 +8484,7 @@
       "_origin": "ast",
       "id": "geo_sat_project_src_inference_predict_rationale_131",
       "community": 26,
-      "community_name": "classify_tile",
+      "community_name": "run_real_pipeline.py",
       "norm_label": "high-level utility for running single-patch inference on a directory containing..."
     },
     {
@@ -8637,8 +8495,19 @@
       "_origin": "ast",
       "id": "geo_sat_project_src_inference_predict_rationale_164",
       "community": 26,
-      "community_name": "classify_tile",
+      "community_name": "run_real_pipeline.py",
       "norm_label": "classifies a full sentinel-2 satellite scene/tile using sliding window patch..."
+    },
+    {
+      "label": "Instantiates the model architecture and populates it with trained weights.\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/src/inference/predict.py",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "geo_sat_project_src_inference_predict_rationale_32",
+      "community": 26,
+      "community_name": "run_real_pipeline.py",
+      "norm_label": "instantiates the model architecture and populates it with trained weights...."
     },
     {
       "label": "Performs inference on a single 6-channel patch tensor. Args: model (nn.Module):\u2026",
@@ -8648,7 +8517,7 @@
       "_origin": "ast",
       "id": "geo_sat_project_src_inference_predict_rationale_87",
       "community": 26,
-      "community_name": "classify_tile",
+      "community_name": "run_real_pipeline.py",
       "norm_label": "performs inference on a single 6-channel patch tensor. args: model (nn.module):..."
     },
     {
@@ -12024,6 +11893,171 @@
       "community": 76,
       "community_name": "start_servers.ps1",
       "norm_label": "start_servers.ps1"
+    },
+    {
+      "label": "Affine",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "affine",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "affine"
+    },
+    {
+      "label": "CRS",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "crs",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "crs"
+    },
+    {
+      "label": "DataFrame",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "dataframe",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "dataframe"
+    },
+    {
+      "label": "Figure",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "figure",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "figure"
+    },
+    {
+      "label": "geo_sat project/change_detection/stats.py",
+      "file_type": "code",
+      "source_file": "geo_sat project/change_detection/stats.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geo_sat_project_change_detection_stats",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "geo_sat project/change_detection/stats.py"
+    },
+    {
+      "label": "src/change_detection/stats.py",
+      "file_type": "code",
+      "source_file": "geo_sat project/src/change_detection/stats.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_stats",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "src/change_detection/stats.py"
+    },
+    {
+      "label": "ndarray",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_stats_py_ndarray",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "ndarray"
+    },
+    {
+      "label": "Change Detection - Statistics Module Wrapper. Exposes area statistics\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/change_detection/stats.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geo_sat_project_change_detection_stats_rationale_1",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "change detection - statistics module wrapper. exposes area statistics..."
+    },
+    {
+      "label": "Change Detection - Area Statistics and Visualization Module. Calculates pixel-\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/src/change_detection/stats.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_stats_rationale_1",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "change detection - area statistics and visualization module. calculates pixel-..."
+    },
+    {
+      "label": "Generates a grouped bar chart comparing Year 1 vs Year 2 land cover area\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/src/change_detection/stats.py",
+      "source_location": "L176",
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_stats_rationale_176",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "generates a grouped bar chart comparing year 1 vs year 2 land cover area..."
+    },
+    {
+      "label": "Generates a heatmap of class-to-class pixel transition count. Args:\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/src/change_detection/stats.py",
+      "source_location": "L216",
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_stats_rationale_216",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "generates a heatmap of class-to-class pixel transition count. args:..."
+    },
+    {
+      "label": "Computes single pixel area in square meters from affine transform. Handles\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/src/change_detection/stats.py",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_stats_rationale_30",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "computes single pixel area in square meters from affine transform. handles..."
+    },
+    {
+      "label": "Computes class-wise land cover area statistics and 2D transition matrix. Args:\u2026",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/src/change_detection/stats.py",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "geo_sat_project_src_change_detection_stats_rationale_90",
+      "community": 77,
+      "community_name": "compute_landcover_area_stats",
+      "norm_label": "computes class-wise land cover area statistics and 2d transition matrix. args:..."
+    },
+    {
+      "label": "test_optional_torch.py",
+      "file_type": "code",
+      "source_file": "geo_sat project/tests/test_optional_torch.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geo_sat_project_tests_test_optional_torch",
+      "community": 78,
+      "community_name": "test_utils_and_app_import_without_torch",
+      "norm_label": "test_optional_torch.py"
+    },
+    {
+      "label": "Ensure utils and FastAPI app import cleanly when PyTorch is unavailable.",
+      "file_type": "rationale",
+      "source_file": "geo_sat project/tests/test_optional_torch.py",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "geo_sat_project_tests_test_optional_torch_rationale_13",
+      "community": 78,
+      "community_name": "test_utils_and_app_import_without_torch",
+      "norm_label": "ensure utils and fastapi app import cleanly when pytorch is unavailable."
     },
     {
       "label": "dependencies",
@@ -15555,7 +15589,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L212",
+      "source_location": "L225",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geo_sat_project_utils_process_bands_array",
@@ -19251,7 +19285,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L23",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geo_sat_project_utils",
@@ -19263,7 +19297,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L24",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geo_sat_project_utils",
@@ -20571,7 +20605,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L90",
+      "source_location": "L95",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geo_sat_project_utils_get_raster_wgs84_bounds",
@@ -20583,7 +20617,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L198",
+      "source_location": "L203",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geo_sat_project_utils_process_bands_array",
@@ -20715,7 +20749,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L26",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geo_sat_project_utils_get_logger",
@@ -20727,7 +20761,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L198",
+      "source_location": "L203",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geo_sat_project_utils_process_bands_array",
@@ -27293,6 +27327,17 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "geo_sat project/tests/test_optional_torch.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geo_sat_project_tests_test_optional_torch",
+      "target": "geo_sat_project_tests_test_optional_torch_test_utils_and_app_import_without_torch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "geo_sat project/tests/test_overview_performance.py",
       "source_location": "L16",
       "weight": 1.0,
@@ -27547,7 +27592,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L123",
+      "source_location": "L128",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geo_sat_project_utils",
@@ -27558,7 +27603,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L198",
+      "source_location": "L203",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geo_sat_project_utils",
@@ -27569,7 +27614,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L26",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geo_sat_project_utils",
@@ -27580,7 +27625,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L53",
+      "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geo_sat_project_utils",
@@ -27591,7 +27636,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L90",
+      "source_location": "L95",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geo_sat_project_utils",
@@ -30494,6 +30539,17 @@
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
+      "source_file": "geo_sat project/tests/test_optional_torch.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geo_sat_project_tests_test_optional_torch_rationale_13",
+      "target": "geo_sat_project_tests_test_optional_torch_test_utils_and_app_import_without_torch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
       "source_file": "geo_sat project/tests/test_phase6a_raster.py",
       "source_location": "L116",
       "weight": 1.0,
@@ -30605,10 +30661,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L124",
+      "source_location": "L129",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "geo_sat_project_utils_rationale_124",
+      "source": "geo_sat_project_utils_rationale_129",
       "target": "geo_sat_project_utils_find_sentinel_bands",
       "confidence_score": 1.0
     },
@@ -30616,10 +30672,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L199",
+      "source_location": "L204",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "geo_sat_project_utils_rationale_199",
+      "source": "geo_sat_project_utils_rationale_204",
       "target": "geo_sat_project_utils_process_bands_array",
       "confidence_score": 1.0
     },
@@ -30627,10 +30683,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L27",
+      "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "geo_sat_project_utils_rationale_27",
+      "source": "geo_sat_project_utils_rationale_32",
       "target": "geo_sat_project_utils_get_logger",
       "confidence_score": 1.0
     },
@@ -30638,10 +30694,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L57",
+      "source_location": "L62",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "geo_sat_project_utils_rationale_57",
+      "source": "geo_sat_project_utils_rationale_62",
       "target": "geo_sat_project_utils_download_model_weights_if_missing",
       "confidence_score": 1.0
     },
@@ -30649,10 +30705,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "geo_sat project/utils.py",
-      "source_location": "L91",
+      "source_location": "L96",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "geo_sat_project_utils_rationale_91",
+      "source": "geo_sat_project_utils_rationale_96",
       "target": "geo_sat_project_utils_get_raster_wgs84_bounds",
       "confidence_score": 1.0
     },
@@ -31422,5 +31478,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ae91e88835b99116f5cef3a8b5b8ace531357315"
+  "built_at_commit": "794728187909db70314f7f432053cca4f7adc944"
 }

@@ -4,11 +4,13 @@ Provides reusable helpers for logging setup, Sentinel-2 band file discovery,
 common tensor transformations, automatic model weight download, and WGS84 CRS transformations.
 """
 
+from __future__ import annotations
+
 import os
 import sys
 import logging
 import requests
-from typing import Dict, Optional, Tuple, Any
+from typing import TYPE_CHECKING, Dict, Optional, Tuple, Any
 
 import numpy as np
 try:
@@ -17,6 +19,9 @@ try:
 except ImportError:
     torch = None  # type: ignore[assignment]
     F = None  # type: ignore[assignment]
+
+if TYPE_CHECKING:
+    import torch as _torch
 import rasterio
 from rasterio.warp import transform_bounds
 
@@ -207,7 +212,15 @@ def process_bands_array(bands_array: np.ndarray, target_size: int = 64) -> torch
         
     Returns:
         torch.Tensor: Preprocessed tensor of shape (1, 6, target_size, target_size).
+
+    Raises:
+        RuntimeError: If PyTorch is not installed in the current environment.
     """
+    if torch is None or F is None:
+        raise RuntimeError(
+            "PyTorch is required for process_bands_array() but is not installed in this environment."
+        )
+
     # 1. Compute NDVI/NDWI and stack -> (H, W, 6)
     processed_array = normalize_and_stack(bands_array)
     

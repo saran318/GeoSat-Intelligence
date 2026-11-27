@@ -1,16 +1,16 @@
 # Graph Report - geo_sat_project  (2026-11-27)
 
 ## Corpus Check
-- 127 files · ~102,568 words
+- 128 files · ~102,686 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1075 nodes · 1648 edges · 77 communities (67 shown, 10 thin omitted)
+- 1078 nodes · 1650 edges · 79 communities (68 shown, 11 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 68 edges (avg confidence: 0.51)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ae91e888`
+- Built from commit: `79472818`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -38,10 +38,10 @@
 - TileStitcher
 - AboutPage.tsx
 - react
-- utils.py
+- compute_change_detection
 - test_overview_performance.py
 - GPT & Open Source Models Adapter
-- classify_tile
+- run_real_pipeline.py
 - Section 1: Remote Sensing & Satellite Imagery Fundamentals
 - Section 2: Deep Learning & ResNet50 Architecture
 - Gemini Adapter
@@ -79,6 +79,8 @@
 - validate-skills.sh script
 - validate-templates.sh script
 - validate-workflows.sh script
+- compute_landcover_area_stats
+- test_utils_and_app_import_without_torch
 
 ## God Nodes (most connected - your core abstractions)
 1. `EsriService` - 65 edges
@@ -93,8 +95,6 @@
 10. `classify_tile()` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `get_overview_summary()` --uses--> `EsriService`  [INFERRED]
-  geo_sat project/app/api/dynamic_world.py → geo_sat project/app/services/esri_service.py
 - `predict_land_use()` --calls--> `predict()`  [INFERRED]
   geo_sat project/app/services/backend_client.py → geo_sat project/src/inference/predict.py
 - `classify_satellite_tile()` --calls--> `classify_tile()`  [INFERRED]
@@ -103,23 +103,25 @@
   geo_sat project/app/services/dynamic_world_service.py → geo_sat project/app/services/esri_service.py
 - `test_dual_tile_district_returns_none_url_and_merges_rasters()` --uses--> `EsriService`  [INFERRED]
   geo_sat project/tests/test_dual_tile.py → geo_sat project/app/services/esri_service.py
+- `test_dual_tile_preview_covers_both_tiles()` --uses--> `EsriService`  [INFERRED]
+  geo_sat project/tests/test_dual_tile.py → geo_sat project/app/services/esri_service.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (77 total, 10 thin omitted)
+## Communities (79 total, 11 thin omitted)
 
 ### Community 0 - "EsriService"
 Cohesion: 0.05
-Nodes (53): get_boundary(), _r2_preview_exists(), Verify whether the preview PNG exists in R2, with a short-TTL in-memory cache., Returns the GeoJSON polygon boundary for the requested city or district., get_change_stats(), get_hierarchy(), get_location(), get_tiles() (+45 more)
+Nodes (55): get_boundary(), get_overview_summary(), _r2_preview_exists(), Verify whether the preview PNG exists in R2, with a short-TTL in-memory cache., Returns the GeoJSON polygon boundary for the requested city or district., Returns real statewide 2019-2025 Tamil Nadu snapshot, top movers, and config…, get_change_stats(), get_hierarchy() (+47 more)
 
 ### Community 1 - "DynamicWorldService"
-Cohesion: 0.05
-Nodes (62): get_change_stats(), get_cities(), get_layers(), get_metadata(), get_overview_summary(), get_preview(), get_raster(), get_stats() (+54 more)
+Cohesion: 0.06
+Nodes (60): get_change_stats(), get_cities(), get_layers(), get_metadata(), get_preview(), get_raster(), get_stats(), get_transitions() (+52 more)
 
 ### Community 2 - "backend_client.py"
-Cohesion: 0.05
-Nodes (65): Affine, CRS, DataFrame, Figure, analyze_change_detection(), ChangeDetectionResponse, classify_satellite_tile(), get_available_cities() (+57 more)
+Cohesion: 0.11
+Nodes (29): ChangeDetectionResponse, classify_satellite_tile(), get_available_cities(), get_available_layers(), get_demo_data(), get_latest_valid_city_dir(), get_stats_summary(), health_check() (+21 more)
 
 ### Community 3 - "backend_config.py"
 Cohesion: 0.05
@@ -178,8 +180,8 @@ Cohesion: 0.10
 Nodes (19): Complete Project Workflow, Expected Inputs (Inference), Expected Outputs (Inference), Files Person 2 Should NEVER Modify, Files Provided to Person 2, Folder Structure, Functions Person 2 Should Call, Future Improvements (+11 more)
 
 ### Community 17 - "extract_patches"
-Cohesion: 0.18
-Nodes (16): apply_scl_cloud_mask(), extract_patches(), load_bands(), load_scl_band(), normalize_and_stack(), Any, ndarray, Data Preprocessing module for Sentinel-2 satellite images. Memory-optimized for… (+8 more)
+Cohesion: 0.08
+Nodes (31): apply_scl_cloud_mask(), extract_patches(), load_bands(), load_scl_band(), normalize_and_stack(), Any, ndarray, Data Preprocessing module for Sentinel-2 satellite images. Memory-optimized for… (+23 more)
 
 ### Community 18 - "components.json"
 Cohesion: 0.11
@@ -201,9 +203,9 @@ Nodes (8): Footer(), FooterProps, SITE_CONFIG, PAGE_TITLES, AboutPage(), AboutPa
 Cohesion: 0.12
 Nodes (4): RegionSelectorProps, YearRangePillsProps, RegionYearState, react
 
-### Community 23 - "utils.py"
-Cohesion: 0.12
-Nodes (15): download_model_weights_if_missing(), find_sentinel_bands(), get_logger(), get_raster_wgs84_bounds(), process_bands_array(), Any, ndarray, Tensor (+7 more)
+### Community 23 - "compute_change_detection"
+Cohesion: 0.20
+Nodes (14): analyze_change_detection(), Multi-temporal land cover change detection endpoint., Change Detection - Difference Map Module Wrapper. Exposes diff map functions…, Change Detection Module Top-level Package., align_and_load_rasters(), compute_change_detection(), export_change_geotiff(), Any (+6 more)
 
 ### Community 24 - "test_overview_performance.py"
 Cohesion: 0.18
@@ -213,9 +215,9 @@ Nodes (7): _FakeQueryBuilder, _FakeSupabaseClient, _make_sample_classes(), fixtu
 Cohesion: 0.15
 Nodes (12): Anti-Patterns, Context Optimization, Function Calling, General Guidance, GPT Models, GPT & Open Source Models Adapter, Local Deployment, Model Selection (+4 more)
 
-### Community 26 - "classify_tile"
-Cohesion: 0.22
-Nodes (12): Predict module for Sentinel-2 Land-Use Classification. Re-exports single patch…, classify_tile(), predict(), preprocess_image(), Any, Tensor, Finds Sentinel-2 bands in image_dir, loads them, normalizes, computes…, High-level utility for running single-patch inference on a directory containing… (+4 more)
+### Community 26 - "run_real_pipeline.py"
+Cohesion: 0.16
+Nodes (19): Predict module for Sentinel-2 Land-Use Classification. Re-exports single patch…, colorize_class_map(), Converts a 1-band class index TIF into a colored PNG for the frontend., run_pipeline(), export_area_stats_csv(), Exports land cover area statistics DataFrame to CSV. Args: df_stats…, classify_tile(), load_inference_model() (+11 more)
 
 ### Community 27 - "Section 1: Remote Sensing & Satellite Imagery Fundamentals"
 Cohesion: 0.18
@@ -325,19 +327,23 @@ Nodes (3): Expanding the Oxlint configuration, React Compiler, React + TypeScrip
 Cohesion: 0.67
 Nodes (3): buildPdfReportBlob(), escapePdfText(), PdfReportInput
 
+### Community 77 - "compute_landcover_area_stats"
+Cohesion: 0.18
+Nodes (15): Affine, CRS, DataFrame, Figure, Change Detection - Statistics Module Wrapper. Exposes area statistics…, calculate_pixel_area(), compute_landcover_area_stats(), plot_area_comparison() (+7 more)
+
 ## Knowledge Gaps
 - **316 isolated node(s):** `$schema`, `typescript`, `oxc`, `react/rules-of-hooks`, `warn` (+311 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `EsriService` connect `EsriService` to `test_overview_performance.py`, `DynamicWorldService`, `backend_config.py`?**
-  _High betweenness centrality (0.046) - this node is a cross-community bridge._
-- **Why does `DynamicWorldService` connect `DynamicWorldService` to `EsriService`, `backend_config.py`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
+  _High betweenness centrality (0.045) - this node is a cross-community bridge._
 - **Why does `react` connect `react` to `plugins`, `client.ts`, `ChangeAnalyticsPage.tsx`, `DynamicWorldDashboard.tsx`, `DownloadActionPanel.tsx`, `TypographyGuide.tsx`, `OverviewDashboard.tsx`, `App.tsx`, `AboutPage.tsx`, `ErrorBoundary`, `navigation-menu.tsx`?**
+  _High betweenness centrality (0.027) - this node is a cross-community bridge._
+- **Why does `DynamicWorldService` connect `DynamicWorldService` to `EsriService`, `backend_config.py`?**
   _High betweenness centrality (0.027) - this node is a cross-community bridge._
 - **Are the 26 inferred relationships involving `EsriService` (e.g. with `get_boundary()` and `get_overview_summary()`) actually correct?**
   _`EsriService` has 26 INFERRED edges - model-reasoned connections that need verification._
@@ -346,4 +352,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `$schema`, `typescript`, `oxc` to the rest of the system?**
   _316 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `EsriService` be split into smaller, more focused modules?**
-  _Cohesion score 0.05351170568561873 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05193319606497369 - nodes in this community are weakly interconnected._

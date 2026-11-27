@@ -22,10 +22,10 @@
   "20": "TileStitcher",
   "21": "AboutPage.tsx",
   "22": "react",
-  "23": "utils.py",
+  "23": "compute_change_detection",
   "24": "test_overview_performance.py",
   "25": "GPT & Open Source Models Adapter",
-  "26": "classify_tile",
+  "26": "run_real_pipeline.py",
   "27": "Section 1: Remote Sensing & Satellite Imagery Fundamentals",
   "28": "Section 2: Deep Learning & ResNet50 Architecture",
   "29": "Gemini Adapter",
@@ -75,5 +75,7 @@
   "73": "validate-skills.ps1",
   "74": "validate-templates.ps1",
   "75": "validate-workflows.ps1",
-  "76": "start_servers.ps1"
+  "76": "start_servers.ps1",
+  "77": "compute_landcover_area_stats",
+  "78": "test_utils_and_app_import_without_torch"
 }
