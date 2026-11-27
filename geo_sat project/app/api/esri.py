@@ -1,6 +1,6 @@
 import os
-from typing import List, Optional
-from fastapi import APIRouter, HTTPException, Query, status
+from typing import Annotated, List, Optional
+from fastapi import APIRouter, HTTPException, Path, Query, status
 from fastapi.responses import FileResponse, RedirectResponse
 
 import backend_config as bcfg
@@ -19,6 +19,10 @@ esri_router = APIRouter(
     prefix="/api/esri",
     tags=["Esri Regional Land Cover (2019-2025)"]
 )
+
+LevelPath = Annotated[str, Path(min_length=1, max_length=32, pattern=r"^(region|state|district|city)$")]
+LocationIdPath = Annotated[str, Path(min_length=1, max_length=100, pattern=r"^[A-Za-z0-9 _-]+$")]
+YearPath = Annotated[int, Path(ge=2000, le=2100)]
 
 @esri_router.get("/hierarchy", response_model=EsriHierarchyResponse)
 async def get_hierarchy():
@@ -77,7 +81,7 @@ async def get_tiles():
     return [EsriTileInfo(**info) for info in tiles_dict.values()]
 
 @esri_router.get("/location/{level}/{location_id}", response_model=EsriLocationMetadata)
-async def get_location(level: str, location_id: str):
+async def get_location(level: LevelPath, location_id: LocationIdPath):
     """Retrieves spatial metadata and bounding box for a region, state, district, or city."""
     entry = EsriService.get_location_entry(level, location_id)
     if not entry:
@@ -105,7 +109,11 @@ async def get_location(level: str, location_id: str):
     )
 
 @esri_router.get("/stats/{level}/{location_id}/{year}", response_model=EsriYearStatsResponse)
-async def get_year_stats(level: str, location_id: str, year: int):
+async def get_year_stats(
+    level: LevelPath,
+    location_id: LocationIdPath,
+    year: YearPath,
+):
     """Computes fast windowed area stats for a specific hierarchy level and year."""
     if year not in bcfg.ESRI_YEARS:
         raise HTTPException(
@@ -143,8 +151,8 @@ async def get_year_stats(level: str, location_id: str, year: int):
 
 @esri_router.get("/change/{level}/{location_id}", response_model=EsriChangeStatsResponse)
 async def get_change_stats(
-    level: str,
-    location_id: str,
+    level: LevelPath,
+    location_id: LocationIdPath,
     from_year: int = Query(2019, ge=2019, le=2025),
     to_year: int = Query(2025, ge=2019, le=2025)
 ):

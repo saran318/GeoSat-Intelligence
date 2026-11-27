@@ -23,6 +23,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
+from app.security import SecurityMiddleware, is_api_docs_enabled, parse_allowed_origins
+
 # Ensure project root is in system path for clean imports
 _APP_DIR = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(_APP_DIR)
@@ -42,24 +44,31 @@ async def lifespan(app: FastAPI):
     logger.info("API Lifespan closing. Cleaning up resources...")
 
 
+_docs_enabled = is_api_docs_enabled()
+
 # Initialize API-only FastAPI application
 app = FastAPI(
     title="GeoSat Intelligence API",
     description="API-only backend serving Dynamic World and Esri Land Cover analytics.",
     version="3.0.0",
     lifespan=lifespan,
+    docs_url="/docs" if _docs_enabled else None,
+    redoc_url="/redoc" if _docs_enabled else None,
+    openapi_url="/openapi.json" if _docs_enabled else None,
 )
 
-# Configure CORS Middleware from ALLOWED_ORIGINS env var (comma-separated), defaulting to * for dev
-_raw_origins = os.getenv("ALLOWED_ORIGINS", "*").strip()
-_allowed_origins = ["*"] if _raw_origins == "*" else [o.strip() for o in _raw_origins.split(",") if o.strip()]
+# Security middleware (rate limiting, request size bounds, security headers)
+app.add_middleware(SecurityMiddleware)
+
+# Configure strict CORS Middleware from ALLOWED_ORIGINS env var (no wildcard + credentials)
+_allowed_origins, _allow_credentials = parse_allowed_origins()
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_allowed_origins,
-    allow_credentials=_allowed_origins != ["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_credentials=_allow_credentials,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization", "Accept"],
 )
 
 # Mount static assets (e.g. Esri timelapse GIF) and local data dir if present
@@ -75,12 +84,14 @@ if os.path.isdir(_data_dir):
 @app.get("/", tags=["System"])
 async def api_root():
     """API-only root metadata endpoint."""
-    return {
+    payload = {
         "service": "GeoSat Intelligence API",
         "version": "3.0.0",
-        "docs": "/docs",
         "health": "/health",
     }
+    if _docs_enabled:
+        payload["docs"] = "/docs"
+    return payload
 
 
 @app.get("/health", tags=["System"])

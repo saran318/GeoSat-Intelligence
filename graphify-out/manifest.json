@@ -1,836 +1,848 @@
 {
   "frontend/.oxlintrc.json": {
     "mtime": 1788058928.257444,
-    "seen": 1795761105.4753962,
+    "seen": 1795762422.5971196,
     "ast_hash": "029f4905006c1fffd96bc863e2d98d3e",
     "semantic_hash": ""
   },
   "frontend/components.json": {
     "mtime": 1788060797.2758374,
-    "seen": 1795761105.4754045,
+    "seen": 1795762422.597127,
     "ast_hash": "6148dd831df5d7db22cfc3425f527fb2",
     "semantic_hash": ""
   },
   "frontend/package.json": {
     "mtime": 1795667994.5285625,
-    "seen": 1795761105.4754088,
+    "seen": 1795762422.5971308,
     "ast_hash": "fb3c938a1c39db8350caf906a35cd405",
     "semantic_hash": ""
   },
   "frontend/src/App.tsx": {
     "mtime": 1795667951.8174193,
-    "seen": 1795761105.475411,
+    "seen": 1795762422.5971334,
     "ast_hash": "8eb3326a8163cdf3b9536354b3781fa8",
     "semantic_hash": ""
   },
   "frontend/src/TypographyGuide.tsx": {
     "mtime": 1789908341.9686759,
-    "seen": 1795761105.475413,
+    "seen": 1795762422.5971355,
     "ast_hash": "2384d7a53b11e3423a871de11838a98c",
     "semantic_hash": ""
   },
   "frontend/src/api/analyticsFetchers.ts": {
     "mtime": 1795602653.5975387,
-    "seen": 1795761105.4754148,
+    "seen": 1795762422.5971377,
     "ast_hash": "9b8ccf46b336969736327bc53d3f9042",
     "semantic_hash": ""
   },
   "frontend/src/api/client.ts": {
     "mtime": 1795668698.132891,
-    "seen": 1795761105.4754164,
+    "seen": 1795762422.5971391,
     "ast_hash": "d456406119b17a13eb261f6af88dfcd0",
     "semantic_hash": ""
   },
   "frontend/src/api/dynamicWorldClient.ts": {
     "mtime": 1795663903.6739109,
-    "seen": 1795761105.475418,
+    "seen": 1795762422.597141,
     "ast_hash": "79316ee807e6826570cea9afeb91e3b4",
     "semantic_hash": ""
   },
   "frontend/src/api/dynamicWorldTypes.ts": {
     "mtime": 1795590522.2884035,
-    "seen": 1795761105.4754198,
+    "seen": 1795762422.5971425,
     "ast_hash": "a25a0a53eacb1759efd3d9afa39067d5",
     "semantic_hash": ""
   },
   "frontend/src/api/types.ts": {
     "mtime": 1795667956.634582,
-    "seen": 1795761105.4754212,
+    "seen": 1795762422.5971441,
     "ast_hash": "834bf82b7f3653a3ed5e4b8b3ad263a6",
     "semantic_hash": ""
   },
   "frontend/src/components/common/ApiOfflineBanner.tsx": {
     "mtime": 1795608727.5175705,
-    "seen": 1795761105.4754229,
+    "seen": 1795762422.5971458,
     "ast_hash": "585d8921aca1e7ab379b47bca6a50b56",
     "semantic_hash": ""
   },
   "frontend/src/components/common/ErrorBoundary.tsx": {
     "mtime": 1795662773.980045,
-    "seen": 1795761105.475425,
+    "seen": 1795762422.5971475,
     "ast_hash": "ee92ae2f53d57135acbae79dd305006f",
     "semantic_hash": ""
   },
   "frontend/src/components/common/Footer.tsx": {
     "mtime": 1795663656.0951972,
-    "seen": 1795761105.475427,
+    "seen": 1795762422.597149,
     "ast_hash": "63f66e9475dc1fa816e02fd132aa7d18",
     "semantic_hash": ""
   },
   "frontend/src/components/common/Navbar.tsx": {
     "mtime": 1795667954.9851148,
-    "seen": 1795761105.4754288,
+    "seen": 1795762422.5971506,
     "ast_hash": "ff62caf1e6d06022ef24679665ea303a",
     "semantic_hash": ""
   },
   "frontend/src/components/dynamic_world/DynamicWorldControls.tsx": {
     "mtime": 1795666402.0806646,
-    "seen": 1795761105.4754307,
+    "seen": 1795762422.597152,
     "ast_hash": "ccdf0f6cfb208f983e3580394b5ace9d",
     "semantic_hash": ""
   },
   "frontend/src/components/dynamic_world/DynamicWorldDashboard.tsx": {
     "mtime": 1795666404.5695183,
-    "seen": 1795761105.4754324,
+    "seen": 1795762422.597154,
     "ast_hash": "740db2c6a668ef7fc89bddb6f046b28b",
     "semantic_hash": ""
   },
   "frontend/src/components/dynamic_world/DynamicWorldLegend.tsx": {
     "mtime": 1795666406.9097211,
-    "seen": 1795761105.475434,
+    "seen": 1795762422.5971553,
     "ast_hash": "fbb2aea6bb2cc87e2cf4789062028451",
     "semantic_hash": ""
   },
   "frontend/src/components/dynamic_world/DynamicWorldMap.tsx": {
     "mtime": 1795668746.9823015,
-    "seen": 1795761105.4754355,
+    "seen": 1795762422.597157,
     "ast_hash": "5d653815673c849a8bdbb7002c32df0f",
     "semantic_hash": ""
   },
   "frontend/src/components/dynamic_world/DynamicWorldStats.tsx": {
     "mtime": 1795666409.0444317,
-    "seen": 1795761105.4754367,
+    "seen": 1795762422.597159,
     "ast_hash": "8d87d8d57962b3831e0fb5364b1864ea",
     "semantic_hash": ""
   },
   "frontend/src/components/esri/EsriLandCoverDashboard.tsx": {
     "mtime": 1795498636.60464,
-    "seen": 1795761105.4754386,
+    "seen": 1795762422.5971608,
     "ast_hash": "e47cc4ea3db6ebe6e7d9b73365f7befa",
     "semantic_hash": ""
   },
   "frontend/src/components/export/DownloadActionPanel.tsx": {
     "mtime": 1795666447.5363834,
-    "seen": 1795761105.47544,
+    "seen": 1795762422.5971622,
     "ast_hash": "0bd17fc87f92c409695dcbdb18422eb7",
     "semantic_hash": ""
   },
   "frontend/src/components/export/ReportsExportPage.tsx": {
     "mtime": 1795662854.873105,
-    "seen": 1795761105.4754415,
+    "seen": 1795762422.5971637,
     "ast_hash": "82df053c194b8cfb8e7abcd23a8a8297",
     "semantic_hash": ""
   },
   "frontend/src/components/inference/PatchUploader.tsx": {
     "mtime": 1795666457.5084453,
-    "seen": 1795761105.475443,
+    "seen": 1795762422.5971653,
     "ast_hash": "8eea30b7e62aaf57146221b5ceddb894",
     "semantic_hash": ""
   },
   "frontend/src/components/map/MapLegend.tsx": {
     "mtime": 1795666494.0422213,
-    "seen": 1795761105.4754446,
+    "seen": 1795762422.5971665,
     "ast_hash": "c3b42c8b6a84304287cdea23cce27e91",
     "semantic_hash": ""
   },
   "frontend/src/components/overview/OverviewDashboard.tsx": {
     "mtime": 1795668168.1040556,
-    "seen": 1795761105.475446,
+    "seen": 1795762422.597168,
     "ast_hash": "4d4ad3f1ec88cf522819975ea6a80fd1",
     "semantic_hash": ""
   },
   "frontend/src/components/shared/AsyncStates.tsx": {
     "mtime": 1795602678.5763693,
-    "seen": 1795761105.4754472,
+    "seen": 1795762422.5971694,
     "ast_hash": "7ed5bb2f1bc6ef65ce9ead14c5d4ba3b",
     "semantic_hash": ""
   },
   "frontend/src/components/shared/RegionSelector.tsx": {
     "mtime": 1795661306.4525661,
-    "seen": 1795761105.4754488,
+    "seen": 1795762422.5971706,
     "ast_hash": "9ebe36ead602ab1cff8c9491eb55024d",
     "semantic_hash": ""
   },
   "frontend/src/components/shared/YearRangePills.tsx": {
     "mtime": 1795602660.2604363,
-    "seen": 1795761105.4754503,
+    "seen": 1795762422.5971723,
     "ast_hash": "b5a03460ece569d05f838b200128e36b",
     "semantic_hash": ""
   },
   "frontend/src/components/trends/ChangeAnalyticsPage.tsx": {
     "mtime": 1795662852.5167463,
-    "seen": 1795761105.4754522,
+    "seen": 1795762422.5971735,
     "ast_hash": "6ac5bb61907dd06b74c0c509032b2fbc",
     "semantic_hash": ""
   },
   "frontend/src/components/trends/TrendAreaTable.tsx": {
     "mtime": 1795666445.183448,
-    "seen": 1795761105.4754536,
+    "seen": 1795762422.5971751,
     "ast_hash": "08d4d21a3b64f70914f2229591161f90",
     "semantic_hash": ""
   },
   "frontend/src/components/trends/TrendSeriesChart.tsx": {
     "mtime": 1795603880.0218709,
-    "seen": 1795761105.4754555,
+    "seen": 1795762422.5971766,
     "ast_hash": "972f833383266ee1296a153fa0177151",
     "semantic_hash": ""
   },
   "frontend/src/components/ui/navigation-menu.tsx": {
     "mtime": 1788060892.2897184,
-    "seen": 1795761105.475457,
+    "seen": 1795762422.5971777,
     "ast_hash": "8f63f70555954552cfd6f8284f542728",
     "semantic_hash": ""
   },
   "frontend/src/config/dynamicWorldClasses.ts": {
     "mtime": 1795590183.1282036,
-    "seen": 1795761105.4754584,
+    "seen": 1795762422.5971792,
     "ast_hash": "060b2fe80bd80b50496465852cb3f13d",
     "semantic_hash": ""
   },
   "frontend/src/config/site.ts": {
     "mtime": 1795666396.855744,
-    "seen": 1795761105.47546,
+    "seen": 1795762422.5971806,
     "ast_hash": "1db5b094a82761a1b0a0b83e22deb8e5",
     "semantic_hash": ""
   },
   "frontend/src/hooks/usePageTitle.ts": {
     "mtime": 1795666398.434575,
-    "seen": 1795761105.4754615,
+    "seen": 1795762422.5971823,
     "ast_hash": "e61c01dfb04f487e917827354fc6e38b",
     "semantic_hash": ""
   },
   "frontend/src/hooks/useRegionYearParams.ts": {
     "mtime": 1795602645.675487,
-    "seen": 1795761105.4754632,
+    "seen": 1795762422.5971832,
     "ast_hash": "a921d64b132288d3d1b4a682b44adccf",
     "semantic_hash": ""
   },
   "frontend/src/lib/utils.ts": {
     "mtime": 1788060655.9676952,
-    "seen": 1795761105.4754643,
+    "seen": 1795762422.5971847,
     "ast_hash": "8595c2f874aa1ff8c7cc28df2999f354",
     "semantic_hash": ""
   },
   "frontend/src/main.tsx": {
     "mtime": 1788062546.6056125,
-    "seen": 1795761105.4754658,
+    "seen": 1795762422.5971863,
     "ast_hash": "4cf8dfb2e536b8f47518e184c454ad0a",
     "semantic_hash": ""
   },
   "frontend/src/pages/AboutPage.tsx": {
     "mtime": 1795666498.5420563,
-    "seen": 1795761105.475467,
+    "seen": 1795762422.5971875,
     "ast_hash": "7802bc0c81a8ca779c9ec702b69330c4",
     "semantic_hash": ""
   },
   "frontend/src/pages/DataPage.tsx": {
     "mtime": 1795662782.5785942,
-    "seen": 1795761105.4754686,
+    "seen": 1795762422.5971892,
     "ast_hash": "d1da06786fb67b23d3649ee7616dd196",
     "semantic_hash": ""
   },
   "frontend/src/pages/NotFoundPage.tsx": {
     "mtime": 1795662776.8423243,
-    "seen": 1795761105.47547,
+    "seen": 1795762422.5971906,
     "ast_hash": "ff5d61fd60fea68648939318dce9782e",
     "semantic_hash": ""
   },
   "frontend/src/pages/PrivacyPage.tsx": {
     "mtime": 1795662785.3401315,
-    "seen": 1795761105.4754717,
+    "seen": 1795762422.5971923,
     "ast_hash": "351c219ebafa777e9500b7f42ed61967",
     "semantic_hash": ""
   },
   "frontend/src/utils/pdfReport.ts": {
     "mtime": 1795666471.5066292,
-    "seen": 1795761105.4754727,
+    "seen": 1795762422.597194,
     "ast_hash": "cff47017ef40d55353b709909aaed3ab",
     "semantic_hash": ""
   },
   "frontend/tsconfig.app.json": {
     "mtime": 1788060697.6282759,
-    "seen": 1795761105.475474,
+    "seen": 1795762422.5971956,
     "ast_hash": "6d438699a14987f6333b34634f0e8d04",
     "semantic_hash": ""
   },
   "frontend/tsconfig.json": {
     "mtime": 1788058928.3211586,
-    "seen": 1795761105.4754758,
+    "seen": 1795762422.597197,
     "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
     "semantic_hash": ""
   },
   "frontend/tsconfig.node.json": {
     "mtime": 1788058928.3379383,
-    "seen": 1795761105.475477,
+    "seen": 1795762422.5971985,
     "ast_hash": "f9cb81ddcea69ffdab672fc8c48dca66",
     "semantic_hash": ""
   },
   "frontend/vercel.json": {
     "mtime": 1795669161.910876,
-    "seen": 1795761105.4754782,
+    "seen": 1795762422.5972,
     "ast_hash": "be609edf0f955fc66c31149c6ae1961f",
     "semantic_hash": ""
   },
   "frontend/vite.config.ts": {
     "mtime": 1795610901.3325953,
-    "seen": 1795761105.4754794,
+    "seen": 1795762422.5972013,
     "ast_hash": "1250e8f150dcd5da2ec82592526878ce",
     "semantic_hash": ""
   },
   "geo_sat project/app/__init__.py": {
     "mtime": 1786266443.7171402,
-    "seen": 1795761105.4754808,
+    "seen": 1795762422.597203,
     "ast_hash": "5507571b83b5b276c6a24191b0ff8fb2",
     "semantic_hash": ""
   },
   "geo_sat project/app/api/dynamic_world.py": {
-    "mtime": 1795757682.136729,
-    "seen": 1795761105.4754822,
-    "ast_hash": "450a8bc4bab8743fbf80098a8a6507b4",
+    "mtime": 1795762118.8958776,
+    "seen": 1795762422.5972042,
+    "ast_hash": "7f14b24755351d7bf587095bba956bdf",
     "semantic_hash": ""
   },
   "geo_sat project/app/api/esri.py": {
-    "mtime": 1795668063.9583066,
-    "seen": 1795761105.475484,
-    "ast_hash": "9fea7a0da759fbefdfb3b6798bd1b551",
+    "mtime": 1795762134.9856155,
+    "seen": 1795762422.5972059,
+    "ast_hash": "a73b4a3c09c45b04e4c1cfabfdb67ddc",
     "semantic_hash": ""
   },
   "geo_sat project/app/main.py": {
-    "mtime": 1795683143.1867137,
-    "seen": 1795761105.475485,
-    "ast_hash": "8297f8581dca90e1bb3e4397cbb735ea",
+    "mtime": 1795761960.6872654,
+    "seen": 1795762422.5972068,
+    "ast_hash": "d42207fc673e7a7dfe50f6a2ccff1825",
     "semantic_hash": ""
   },
   "geo_sat project/app/schemas/dynamic_world.py": {
     "mtime": 1795589063.303042,
-    "seen": 1795761105.4754865,
+    "seen": 1795762422.5972083,
     "ast_hash": "b5c059ea5750acc73cad29ffc79fae9f",
     "semantic_hash": ""
   },
   "geo_sat project/app/schemas/esri.py": {
     "mtime": 1795497090.8961525,
-    "seen": 1795761105.475488,
+    "seen": 1795762422.59721,
     "ast_hash": "fa4dcc7fa834694a9ce5324f7ff5e9b7",
     "semantic_hash": ""
   },
   "geo_sat project/app/services/backend_client.py": {
     "mtime": 1794984444.2354116,
-    "seen": 1795761105.4754896,
+    "seen": 1795762422.597213,
     "ast_hash": "4c4baa9ba6d513ff70b7dbf232cce528",
     "semantic_hash": ""
   },
   "geo_sat project/app/services/dynamic_world_service.py": {
     "mtime": 1795683166.5551147,
-    "seen": 1795761105.475491,
+    "seen": 1795762422.5972147,
     "ast_hash": "ddfe4f3930d6d3d302250cd5f3c1cf94",
     "semantic_hash": ""
   },
   "geo_sat project/app/services/esri_service.py": {
     "mtime": 1795757679.4928548,
-    "seen": 1795761105.4754922,
+    "seen": 1795762422.5972164,
     "ast_hash": "7455a1adad5d480199cbdf1adb3d02f3",
     "semantic_hash": ""
   },
   "geo_sat project/backend_config.py": {
     "mtime": 1795757676.9716046,
-    "seen": 1795761105.4754937,
+    "seen": 1795762422.597218,
     "ast_hash": "c62820044eb1d170f364f565b2ff71a1",
     "semantic_hash": ""
   },
   "geo_sat project/change_detection/__init__.py": {
     "mtime": 1786244058.277441,
-    "seen": 1795761105.4754953,
+    "seen": 1795762422.5972195,
     "ast_hash": "9211511f8ed410717a62e89746ef43b5",
     "semantic_hash": ""
   },
   "geo_sat project/change_detection/diff_maps.py": {
     "mtime": 1786244058.2445986,
-    "seen": 1795761105.4754968,
+    "seen": 1795762422.5972211,
     "ast_hash": "6c934b297e02ec2ef95933ad8cbf7aba",
     "semantic_hash": ""
   },
   "geo_sat project/change_detection/stats.py": {
     "mtime": 1786244058.2608356,
-    "seen": 1795761105.4754982,
+    "seen": 1795762422.5972226,
     "ast_hash": "921c732404bf9140da57fcc60b2edf2a",
     "semantic_hash": ""
   },
   "geo_sat project/predict.py": {
     "mtime": 1786244057.9554725,
-    "seen": 1795761105.4754996,
+    "seen": 1795762422.5972242,
     "ast_hash": "8d8dcc81bb84f73eea15b5fccffa8739",
     "semantic_hash": ""
   },
   "geo_sat project/run_real_pipeline.py": {
     "mtime": 1788756931.7223406,
-    "seen": 1795761105.4755008,
+    "seen": 1795762422.597226,
     "ast_hash": "d842819109ab09517ceb729174c70d54",
     "semantic_hash": ""
   },
   "geo_sat project/scripts/detect_change_dynamic_world.py": {
     "mtime": 1789906264.9028394,
-    "seen": 1795761105.475502,
+    "seen": 1795762422.5972276,
     "ast_hash": "c8bc8d10791012b4267635a786426dde",
     "semantic_hash": ""
   },
   "geo_sat project/scripts/download_dynamic_world.py": {
     "mtime": 1789906220.0984893,
-    "seen": 1795761105.4755034,
+    "seen": 1795762422.5972288,
     "ast_hash": "6e976e6e88fed79dbd13e17c8f163c21",
     "semantic_hash": ""
   },
   "geo_sat project/scripts/download_gee.py": {
     "mtime": 1789905475.9013073,
-    "seen": 1795761105.4755046,
+    "seen": 1795762422.5972307,
     "ast_hash": "393d3362bc6983dfd142a6c52910f06f",
     "semantic_hash": ""
   },
   "geo_sat project/scripts/download_sentinel.py": {
     "mtime": 1788576002.0056057,
-    "seen": 1795761105.4755058,
+    "seen": 1795762422.5972323,
     "ast_hash": "a7ec8639dce911af66878a7e166ac3e9",
     "semantic_hash": ""
   },
   "geo_sat project/scripts/generate_esri_timelapse_gif.py": {
     "mtime": 1795497113.7486541,
-    "seen": 1795761105.4755073,
+    "seen": 1795762422.5972342,
     "ast_hash": "b44045c0778676ffb1973175bb7fb4bd",
     "semantic_hash": ""
   },
   "geo_sat project/scripts/process_dynamic_world_cities.py": {
     "mtime": 1795257207.364931,
-    "seen": 1795761105.4755087,
+    "seen": 1795762422.5972357,
     "ast_hash": "a856ee6c619c87c15b91e2d8c9f9fb72",
     "semantic_hash": ""
   },
   "geo_sat project/scripts/process_esri_hierarchy.py": {
     "mtime": 1795497298.7389553,
-    "seen": 1795761105.4755101,
+    "seen": 1795762422.5972373,
     "ast_hash": "da3c0018243294bd32a026b18114a92e",
     "semantic_hash": ""
   },
   "geo_sat project/scripts/seed_supabase.py": {
     "mtime": 1795699931.5720472,
-    "seen": 1795761105.4755113,
+    "seen": 1795762422.5972388,
     "ast_hash": "f0d7661916b9223ac9cb31249e195c86",
     "semantic_hash": ""
   },
   "geo_sat project/scripts/upload_to_r2.py": {
     "mtime": 1795757696.0070505,
-    "seen": 1795761105.4755125,
+    "seen": 1795762422.5972402,
     "ast_hash": "f8cb86d503fd36ca7bb79a158c32655f",
     "semantic_hash": ""
   },
   "geo_sat project/src/change_detection/__init__.py": {
     "mtime": 1786248675.1817117,
-    "seen": 1795761105.4755142,
+    "seen": 1795762422.597242,
     "ast_hash": "bdfeb7d3b87ae0f67bfe79a52c1cd56a",
     "semantic_hash": ""
   },
   "geo_sat project/src/change_detection/diff_maps.py": {
     "mtime": 1786248675.1183088,
-    "seen": 1795761105.4755154,
+    "seen": 1795762422.5972433,
     "ast_hash": "7492a6c4227b8a2b6b59ff8092afbb9d",
     "semantic_hash": ""
   },
   "geo_sat project/src/change_detection/stats.py": {
     "mtime": 1788670748.4795437,
-    "seen": 1795761105.4755166,
+    "seen": 1795762422.5972445,
     "ast_hash": "a1f4b992bd0820459e77340b83aa054e",
     "semantic_hash": ""
   },
   "geo_sat project/src/inference/__init__.py": {
     "mtime": 1786248675.346006,
-    "seen": 1795761105.475518,
+    "seen": 1795762422.597246,
     "ast_hash": "0f1547b01f6fd44a3917b93e7f1d6a6a",
     "semantic_hash": ""
   },
   "geo_sat project/src/inference/predict.py": {
     "mtime": 1788673297.2847927,
-    "seen": 1795761105.4755192,
+    "seen": 1795762422.597247,
     "ast_hash": "5234b34639f58d976ea682e27c93d817",
     "semantic_hash": ""
   },
   "geo_sat project/src/inference/stitch.py": {
     "mtime": 1786248675.322006,
-    "seen": 1795761105.4755206,
+    "seen": 1795762422.5972486,
     "ast_hash": "aa79aef1d9402bca8e12eee1a0a2b55c",
     "semantic_hash": ""
   },
   "geo_sat project/src/preprocessing/preprocess.py": {
     "mtime": 1788756932.5085628,
-    "seen": 1795761105.4755223,
+    "seen": 1795762422.5972497,
     "ast_hash": "282548405f1f5c0965eb3ad129ffcc9e",
     "semantic_hash": ""
   },
   "geo_sat project/test_api.py": {
     "mtime": 1788761256.7675295,
-    "seen": 1795761105.475524,
+    "seen": 1795762422.5972514,
     "ast_hash": "b70de9568dd4383e4784940705580054",
     "semantic_hash": ""
   },
   "geo_sat project/test_pipeline.py": {
     "mtime": 1786244058.0368447,
-    "seen": 1795761105.4755254,
+    "seen": 1795762422.5972528,
     "ast_hash": "752197ddc0133d35e05449f49a61709e",
     "semantic_hash": ""
   },
   "geo_sat project/tests/test_b2_migration.py": {
     "mtime": 1795757791.1023889,
-    "seen": 1795761105.4755266,
+    "seen": 1795762422.5972545,
     "ast_hash": "06961220795776f48a0fe168f5fbc8cc",
     "semantic_hash": ""
   },
   "geo_sat project/tests/test_dual_tile.py": {
     "mtime": 1795669147.1933863,
-    "seen": 1795761105.4755282,
+    "seen": 1795762422.5972562,
     "ast_hash": "675a98914da75ab7f66c69e2ddb38f9b",
     "semantic_hash": ""
   },
   "geo_sat project/tests/test_dynamic_world.py": {
     "mtime": 1795257296.3716977,
-    "seen": 1795761105.4755294,
+    "seen": 1795762422.5972576,
     "ast_hash": "a6eb521dc5e385a3450e78c28e11eb56",
     "semantic_hash": ""
   },
   "geo_sat project/tests/test_dynamic_world_api.py": {
     "mtime": 1795668613.3454823,
-    "seen": 1795761105.475531,
+    "seen": 1795762422.597259,
     "ast_hash": "a86d47853138e1d4e8e5ece18fe672d5",
     "semantic_hash": ""
   },
   "geo_sat project/tests/test_dynamic_world_change.py": {
     "mtime": 1789906289.672113,
-    "seen": 1795761105.4755325,
+    "seen": 1795762422.5972607,
     "ast_hash": "2498e72ef0712ffba655ab0ecf68491f",
     "semantic_hash": ""
   },
   "geo_sat project/tests/test_overview_performance.py": {
     "mtime": 1795669165.84815,
-    "seen": 1795761105.4755359,
+    "seen": 1795762422.597264,
     "ast_hash": "7a6293a245e75f0d4e55851912678318",
     "semantic_hash": ""
   },
   "geo_sat project/tests/test_phase6a_raster.py": {
     "mtime": 1795683193.0552444,
-    "seen": 1795761105.475538,
+    "seen": 1795762422.5972657,
     "ast_hash": "9ee795f1f4689608a94ea0fbe10e75a6",
     "semantic_hash": ""
   },
   "geo_sat project/tests/test_preview_fallback.py": {
     "mtime": 1795669156.212584,
-    "seen": 1795761105.4755394,
+    "seen": 1795762422.597267,
     "ast_hash": "f0690403cb78b7c77998c4684b154a06",
     "semantic_hash": ""
   },
   "geo_sat project/training/config.py": {
     "mtime": 1786248675.5441656,
-    "seen": 1795761105.4755409,
+    "seen": 1795762422.59727,
     "ast_hash": "8ae8e56bdd88fd8702e3e4cc14c8f492",
     "semantic_hash": ""
   },
   "geo_sat project/training/model.py": {
     "mtime": 1786248675.6353123,
-    "seen": 1795761105.4755425,
+    "seen": 1795762422.5972712,
     "ast_hash": "a672da458e6e5e521e7b345818101d17",
     "semantic_hash": ""
   },
   "geo_sat project/utils.py": {
     "mtime": 1795761067.6261628,
-    "seen": 1795761105.4755437,
+    "seen": 1795762422.5972729,
     "ast_hash": "eae90ce2f2e3f28268313aebdbcad65e",
     "semantic_hash": ""
   },
   "run_backend.py": {
     "mtime": 1795505685.4195993,
-    "seen": 1795761105.4755454,
+    "seen": 1795762422.597274,
     "ast_hash": "5a6ce2a841cf2d951538e400d087fda3",
     "semantic_hash": ""
   },
   "scripts/search_repo.ps1": {
     "mtime": 1789907262.991793,
-    "seen": 1795761105.4755468,
+    "seen": 1795762422.5972757,
     "ast_hash": "bde64ad1cfed39da3a7af17fd7ff9ed2",
     "semantic_hash": ""
   },
   "scripts/search_repo.sh": {
     "mtime": 1789907262.9927924,
-    "seen": 1795761105.4755485,
+    "seen": 1795762422.5972772,
     "ast_hash": "0a23a446df3f8d75bb082cf33be5cb88",
     "semantic_hash": ""
   },
   "scripts/setup_search.ps1": {
     "mtime": 1789907262.9947882,
-    "seen": 1795761105.4755497,
+    "seen": 1795762422.5972788,
     "ast_hash": "6bde9cae25c3edeafbcad67d27ae6175",
     "semantic_hash": ""
   },
   "scripts/setup_search.sh": {
     "mtime": 1789907262.9973247,
-    "seen": 1795761105.475551,
+    "seen": 1795762422.59728,
     "ast_hash": "da8a1b1717425190c3ac34e09986d945",
     "semantic_hash": ""
   },
   "scripts/validate-agents.ps1": {
     "mtime": 1789907262.9993224,
-    "seen": 1795761105.4755523,
+    "seen": 1795762422.5972812,
     "ast_hash": "51c3050da9734a7016bee999e9d97313",
     "semantic_hash": ""
   },
   "scripts/validate-agents.sh": {
     "mtime": 1789907263.0013347,
-    "seen": 1795761105.4755538,
+    "seen": 1795762422.597283,
     "ast_hash": "86118fc26b073960c8a676b8f14845cf",
     "semantic_hash": ""
   },
   "scripts/validate-all.ps1": {
     "mtime": 1789907263.0021265,
-    "seen": 1795761105.4755552,
+    "seen": 1795762422.597284,
     "ast_hash": "5936bf6c3d2807b243778197e42fec71",
     "semantic_hash": ""
   },
   "scripts/validate-all.sh": {
     "mtime": 1789907263.0041435,
-    "seen": 1795761105.4755566,
+    "seen": 1795762422.5972853,
     "ast_hash": "50c474d8057944041c421674608a6255",
     "semantic_hash": ""
   },
   "scripts/validate-encoding.ps1": {
     "mtime": 1789907263.0051408,
-    "seen": 1795761105.475558,
+    "seen": 1795762422.597287,
     "ast_hash": "6b60dcccd8481dab340f2f03dd5328a3",
     "semantic_hash": ""
   },
   "scripts/validate-encoding.sh": {
     "mtime": 1789907263.0071402,
-    "seen": 1795761105.4755595,
+    "seen": 1795762422.5972881,
     "ast_hash": "d092731f0720d6c8f776b34758af29d8",
     "semantic_hash": ""
   },
   "scripts/validate-skills.ps1": {
     "mtime": 1789907263.0081432,
-    "seen": 1795761105.4755607,
+    "seen": 1795762422.59729,
     "ast_hash": "897c28110f69dffd5c0017b79aa1679d",
     "semantic_hash": ""
   },
   "scripts/validate-skills.sh": {
     "mtime": 1789907263.01114,
-    "seen": 1795761105.4755623,
+    "seen": 1795762422.5972912,
     "ast_hash": "b7d848ee696e35c1b413728a1d361d32",
     "semantic_hash": ""
   },
   "scripts/validate-templates.ps1": {
     "mtime": 1789907263.0131466,
-    "seen": 1795761105.4755635,
+    "seen": 1795762422.5972927,
     "ast_hash": "a58a1c9973c005cb73ed6ffad57d4e2a",
     "semantic_hash": ""
   },
   "scripts/validate-templates.sh": {
     "mtime": 1789907263.015143,
-    "seen": 1795761105.4755647,
+    "seen": 1795762422.597294,
     "ast_hash": "39a4fb9758bb19fd54ba71d23ffad95a",
     "semantic_hash": ""
   },
   "scripts/validate-workflows.ps1": {
     "mtime": 1789907263.016354,
-    "seen": 1795761105.4755664,
+    "seen": 1795762422.5972955,
     "ast_hash": "1539768c3bc95255586260ce4211bb0d",
     "semantic_hash": ""
   },
   "scripts/validate-workflows.sh": {
     "mtime": 1789907263.0183525,
-    "seen": 1795761105.4755678,
+    "seen": 1795762422.597297,
     "ast_hash": "39e87dff05632094894c16890ec2d35f",
     "semantic_hash": ""
   },
   "start_servers.ps1": {
     "mtime": 1795502815.0932071,
-    "seen": 1795761105.4755692,
+    "seen": 1795762422.5972984,
     "ast_hash": "dd01bb8387d4702fe24cfc8d46c2cba7",
     "semantic_hash": ""
   },
   ".github/workflows/README.md": {
     "mtime": 1795748910.7093797,
-    "seen": 1795761105.4755707,
+    "seen": 1795762422.5972998,
     "ast_hash": "e607488ed1f3aa59f3ca7b2d20bc97ea",
     "semantic_hash": ""
   },
   ".github/workflows/supabase-keepalive.yml": {
     "mtime": 1795748908.4592044,
-    "seen": 1795761105.475572,
+    "seen": 1795762422.5973012,
     "ast_hash": "4d7eadffe835a850f5c27f87087decbc",
     "semantic_hash": ""
   },
   "PROJECT_INFO.md": {
     "mtime": 1795505003.2832775,
-    "seen": 1795761105.4755735,
+    "seen": 1795762422.5973024,
     "ast_hash": "e81ffc4dead30d9811434320994b1ea6",
     "semantic_hash": ""
   },
   "adapters/CLAUDE.md": {
     "mtime": 1789907262.9777758,
-    "seen": 1795761105.4755747,
+    "seen": 1795762422.5973039,
     "ast_hash": "db2fb6d80f2ef307648f32c9b5ea1555",
     "semantic_hash": ""
   },
   "adapters/GEMINI.md": {
     "mtime": 1789907262.9797769,
-    "seen": 1795761105.4755764,
+    "seen": 1795762422.5973053,
     "ast_hash": "c8992ce299f5e22343a2a24ecb188617",
     "semantic_hash": ""
   },
   "adapters/GPT_OSS.md": {
     "mtime": 1789907262.9827883,
-    "seen": 1795761105.4755776,
+    "seen": 1795762422.5973067,
     "ast_hash": "148ad68538ab7e30bdf93091cddf673d",
     "semantic_hash": ""
   },
   "frontend/README.md": {
     "mtime": 1788058928.3997712,
-    "seen": 1795761105.4755788,
+    "seen": 1795762422.5973082,
     "ast_hash": "10495bfcc6c568eca4dab6dd5df795d3",
     "semantic_hash": ""
   },
   "frontend/index.html": {
     "mtime": 1795666395.4309125,
-    "seen": 1795761105.4755802,
+    "seen": 1795762422.5973096,
     "ast_hash": "4675d6ea2edbf370c9aa62e847b72fe1",
     "semantic_hash": ""
   },
   "geo_sat project/COLAB_CITY_PROCESSING_GUIDE.md": {
     "mtime": 1788661673.0996394,
-    "seen": 1795761105.4755814,
+    "seen": 1795762422.5973113,
     "ast_hash": "5d9642a353510770d780957908fe98d9",
     "semantic_hash": ""
   },
   "geo_sat project/MASTER_WALKTHROUGH.md": {
     "mtime": 1786244057.9376578,
-    "seen": 1795761105.475583,
+    "seen": 1795762422.5973125,
     "ast_hash": "1743eb5852dd50a525b8707e2f8d6c78",
     "semantic_hash": ""
   },
   "geo_sat project/PROJECT_INFO.md": {
     "mtime": 1795503213.500309,
-    "seen": 1795761105.4755845,
+    "seen": 1795762422.5973141,
     "ast_hash": "723885239116f66e19112dab26c38cbd",
     "semantic_hash": ""
   },
   "geo_sat project/README.md": {
     "mtime": 1786264151.9271612,
-    "seen": 1795761105.4755857,
+    "seen": 1795762422.5973155,
     "ast_hash": "0d409c31fd8313512fb1ea035e17ae8e",
     "semantic_hash": ""
   },
   "geo_sat project/docs/error_analysis.md": {
     "mtime": 1786246281.12189,
-    "seen": 1795761105.4755874,
+    "seen": 1795762422.5973172,
     "ast_hash": "fbdd0dbccf7b75679e9558785727df3d",
     "semantic_hash": ""
   },
   "geo_sat project/docs/viva_prep.md": {
     "mtime": 1786246281.153168,
-    "seen": 1795761105.4755886,
+    "seen": 1795762422.5973184,
     "ast_hash": "27f8fe4f1567743afe6d54e28bdbc4a0",
     "semantic_hash": ""
   },
   "geo_sat project/requirements-prod.txt": {
     "mtime": 1795700375.0728643,
-    "seen": 1795761105.47559,
+    "seen": 1795762422.5973196,
     "ast_hash": "e0ad9e8477a7e20e62ad24041008d2d4",
     "semantic_hash": ""
   },
   "geo_sat project/requirements.txt": {
     "mtime": 1795668004.78263,
-    "seen": 1795761105.4755914,
+    "seen": 1795762422.5973213,
     "ast_hash": "057edb614faa7f8e975af06d304bcbc3",
     "semantic_hash": ""
   },
   "model_capabilities.yaml": {
     "mtime": 1789907262.9877896,
-    "seen": 1795761105.4755924,
+    "seen": 1795762422.597323,
     "ast_hash": "745e4df48a2c433edc0c24812b02edfa",
     "semantic_hash": ""
   },
   "render.yaml": {
-    "mtime": 1795757691.4029016,
-    "seen": 1795761105.475594,
-    "ast_hash": "70c61d716a0b1de6fa371f8d827bdf4b",
+    "mtime": 1795762030.012891,
+    "seen": 1795762422.5973244,
+    "ast_hash": "c0eab994334e46a17eea46c16da529d6",
     "semantic_hash": ""
   },
   "frontend/public/apple-touch-icon.png": {
     "mtime": 1795663642.2331958,
-    "seen": 1795761105.4755955,
+    "seen": 1795762422.5973258,
     "ast_hash": "421c70019f42017a724c401654b6659e",
     "semantic_hash": ""
   },
   "frontend/public/assets/esri_tamil_nadu_2019_2025.gif": {
     "mtime": 1795497184.282297,
-    "seen": 1795761105.4755971,
+    "seen": 1795762422.597327,
     "ast_hash": "428e74e227f9ffa09a9f74da2a66c261",
     "semantic_hash": ""
   },
   "frontend/public/favicon-32.png": {
     "mtime": 1795663797.0586615,
-    "seen": 1795761105.4755983,
+    "seen": 1795762422.5973284,
     "ast_hash": "5fd69841b7a3ca0b5b6c4ded288b136b",
     "semantic_hash": ""
   },
   "frontend/public/favicon.svg": {
     "mtime": 1795663796.9941485,
-    "seen": 1795761105.4755998,
+    "seen": 1795762422.5973299,
     "ast_hash": "79beb5d52a8a182cce2adc41e0e875b2",
     "semantic_hash": ""
   },
   "frontend/public/icons.svg": {
     "mtime": 1788058928.6717167,
-    "seen": 1795761105.475611,
+    "seen": 1795762422.5973313,
     "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
     "semantic_hash": ""
   },
   "frontend/public/logo.png": {
     "mtime": 1795663642.2056296,
-    "seen": 1795761105.4756126,
+    "seen": 1795762422.5973325,
     "ast_hash": "21b9a2664784762f89946e40747b01e7",
     "semantic_hash": ""
   },
   "frontend/public/logo.svg": {
     "mtime": 1795663642.2086391,
-    "seen": 1795761105.4756143,
+    "seen": 1795762422.597334,
     "ast_hash": "c08615d2913fdad1a06b78b746cbeec6",
     "semantic_hash": ""
   },
   "frontend/public/og-image.png": {
     "mtime": 1795663642.304387,
-    "seen": 1795761105.4756155,
+    "seen": 1795762422.5973353,
     "ast_hash": "65f4c5d0940bdb0a112ed5b569da9221",
     "semantic_hash": ""
   },
   "frontend/src/assets/hero.png": {
     "mtime": 1788058928.4879968,
-    "seen": 1795761105.475617,
+    "seen": 1795762422.5973365,
     "ast_hash": "aead493361b27e7510691c5d7072dfc1",
     "semantic_hash": ""
   },
   "geo_sat project/app/static/images/esri_tamil_nadu_2019_2025.gif": {
     "mtime": 1795497183.0121615,
-    "seen": 1795761105.4756186,
+    "seen": 1795762422.597338,
     "ast_hash": "428e74e227f9ffa09a9f74da2a66c261",
     "semantic_hash": ""
   },
   "geo_sat project/tests/test_optional_torch.py": {
     "mtime": 1795761070.1228957,
-    "seen": 1795761105.475534,
+    "seen": 1795762422.5972621,
     "ast_hash": "9bd910eb73bc9442f2e8ebeedc8e4778",
+    "semantic_hash": ""
+  },
+  "geo_sat project/app/security.py": {
+    "mtime": 1795762378.8959224,
+    "seen": 1795762422.5972114,
+    "ast_hash": "8780733e415180394cb7b9e309656dc2",
+    "semantic_hash": ""
+  },
+  "geo_sat project/tests/test_security.py": {
+    "mtime": 1795762343.897351,
+    "seen": 1795762422.5972686,
+    "ast_hash": "78d21ad94b703e92056626af15cba2c9",
     "semantic_hash": ""
   }
 }

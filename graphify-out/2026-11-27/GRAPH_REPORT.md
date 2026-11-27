@@ -1,28 +1,27 @@
 # Graph Report - geo_sat_project  (2026-11-27)
 
 ## Corpus Check
-- 127 files · ~102,568 words
+- 130 files · ~104,316 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1075 nodes · 1648 edges · 77 communities (67 shown, 10 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 68 edges (avg confidence: 0.51)
+- 1122 nodes · 1725 edges · 90 communities (78 shown, 12 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 69 edges (avg confidence: 0.52)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ae91e888`
+- Built from commit: `bc3b9291`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- EsriService
-- DynamicWorldService
+- api/esri.py
+- .get_city_config
 - backend_client.py
-- backend_config.py
+- download_dynamic_world.py
 - dynamicWorldClient.ts
 - client.ts
 - devDependencies
-- test_dynamic_world_api.py
 - dependencies
 - compilerOptions
 - Geo-Satellite Imagery Project
@@ -32,16 +31,16 @@
 - 🛰️ GeoSat Intelligence — Complete Project Guide
 - compilerOptions
 - MASTER_WALKTHROUGH.md
-- extract_patches
+- inference/predict.py
 - components.json
 - App.tsx
-- TileStitcher
+- utils.py
 - AboutPage.tsx
 - react
-- utils.py
+- compute_landcover_area_stats
 - test_overview_performance.py
 - GPT & Open Source Models Adapter
-- classify_tile
+- DynamicWorldService
 - Section 1: Remote Sensing & Satellite Imagery Fundamentals
 - Section 2: Deep Learning & ResNet50 Architecture
 - Gemini Adapter
@@ -50,7 +49,7 @@
 - Colab 10-City Batch Processing Guide
 - 2. Detailed Misclassification Case Studies
 - Section 6: Web Backend, FastAPI, & API Design
-- inference/predict.py
+- Any
 - plugins
 - dynamicWorldClasses.ts
 - generate_esri_timelapse_gif.py
@@ -65,7 +64,7 @@
 - Section 3: Data Preprocessing & Memory Optimization
 - Section 4: Spatial Tiling, Stitching, & Georeferencing
 - seed_supabase.py
-- OverviewDashboard.tsx
+- run_real_pipeline.py
 - upload_to_r2.py
 - setup_search.sh script
 - React + TypeScript + Vite
@@ -79,6 +78,20 @@
 - validate-skills.sh script
 - validate-templates.sh script
 - validate-workflows.sh script
+- test_security.py
+- generate_change_map
+- test_utils_and_app_import_without_torch
+- EsriService
+- .resolve_layer_path
+- security.py
+- main.py
+- compute_change_detection
+- test_preview_fallback.py
+- InMemoryRateLimiter
+- backend_config.py
+- PrivacyPage.tsx
+- .get_hierarchy
+- SecurityMiddleware
 
 ## God Nodes (most connected - your core abstractions)
 1. `EsriService` - 65 edges
@@ -95,35 +108,35 @@
 ## Surprising Connections (you probably didn't know these)
 - `get_overview_summary()` --uses--> `EsriService`  [INFERRED]
   geo_sat project/app/api/dynamic_world.py → geo_sat project/app/services/esri_service.py
-- `predict_land_use()` --calls--> `predict()`  [INFERRED]
-  geo_sat project/app/services/backend_client.py → geo_sat project/src/inference/predict.py
-- `classify_satellite_tile()` --calls--> `classify_tile()`  [INFERRED]
-  geo_sat project/app/services/backend_client.py → geo_sat project/src/inference/predict.py
-- `DynamicWorldService` --uses--> `EsriService`  [INFERRED]
-  geo_sat project/app/services/dynamic_world_service.py → geo_sat project/app/services/esri_service.py
-- `test_dual_tile_district_returns_none_url_and_merges_rasters()` --uses--> `EsriService`  [INFERRED]
-  geo_sat project/tests/test_dual_tile.py → geo_sat project/app/services/esri_service.py
+- `get_boundary()` --uses--> `EsriService`  [INFERRED]
+  geo_sat project/app/api/dynamic_world.py → geo_sat project/app/services/esri_service.py
+- `get_hierarchy()` --uses--> `EsriService`  [INFERRED]
+  geo_sat project/app/api/esri.py → geo_sat project/app/services/esri_service.py
+- `get_tiles()` --uses--> `EsriService`  [INFERRED]
+  geo_sat project/app/api/esri.py → geo_sat project/app/services/esri_service.py
+- `get_location()` --uses--> `EsriService`  [INFERRED]
+  geo_sat project/app/api/esri.py → geo_sat project/app/services/esri_service.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (77 total, 10 thin omitted)
+## Communities (90 total, 12 thin omitted)
 
-### Community 0 - "EsriService"
-Cohesion: 0.05
-Nodes (53): get_boundary(), _r2_preview_exists(), Verify whether the preview PNG exists in R2, with a short-TTL in-memory cache., Returns the GeoJSON polygon boundary for the requested city or district., get_change_stats(), get_hierarchy(), get_location(), get_tiles() (+45 more)
+### Community 0 - "api/esri.py"
+Cohesion: 0.14
+Nodes (28): get_change_stats(), get_hierarchy(), get_location(), get_tiles(), get_visual_resource_gif(), get_visual_resource_metadata(), get_year_stats(), get (+20 more)
 
-### Community 1 - "DynamicWorldService"
-Cohesion: 0.05
-Nodes (62): get_change_stats(), get_cities(), get_layers(), get_metadata(), get_overview_summary(), get_preview(), get_raster(), get_stats() (+54 more)
+### Community 1 - ".get_city_config"
+Cohesion: 0.18
+Nodes (8): Any, Resolves to the Cloudflare R2 GeoTIFF URL for single-tile districts when R2 is…, Calculates exact class distribution for the city window., Calculates multi-year pixel-wise change and net class fluxes., Computes real directional transition matrix across Esri classes., Normalizes EsriService.resolve_city_tile(city) to a non-empty list of tile IDs., Single-tile district (Chennai -> ['44P']) returns direct R2 URL when R2 is…, test_single_tile_district_returns_r2_url()
 
 ### Community 2 - "backend_client.py"
-Cohesion: 0.05
-Nodes (65): Affine, CRS, DataFrame, Figure, analyze_change_detection(), ChangeDetectionResponse, classify_satellite_tile(), get_available_cities() (+57 more)
+Cohesion: 0.10
+Nodes (31): analyze_change_detection(), ChangeDetectionResponse, classify_satellite_tile(), get_available_cities(), get_available_layers(), get_demo_data(), get_latest_valid_city_dir(), get_stats_summary() (+23 more)
 
-### Community 3 - "backend_config.py"
-Cohesion: 0.05
-Nodes (58): get_esri_raster_filename(), Configuration settings for the Person 2 Backend & Inference module. Centrally…, Returns canonical Esri 10m LULC GeoTIFF filename for a tile and year., detect_change(), strict_grid_validation(), compare_methods(), compute_statistics(), download_dynamic_world_data() (+50 more)
+### Community 3 - "download_dynamic_world.py"
+Cohesion: 0.13
+Nodes (20): compare_methods(), compute_statistics(), download_dynamic_world_data(), generate_disagreement_png(), load_city_roi(), ndarray, Generates a map highlighting pixels where mode != probability., verify_grid_alignment() (+12 more)
 
 ### Community 4 - "dynamicWorldClient.ts"
 Cohesion: 0.08
@@ -131,15 +144,11 @@ Nodes (33): fetchChangeAndTransitions(), fetchRegionsWithClasses(), fetchYearlyS
 
 ### Community 5 - "client.ts"
 Cohesion: 0.09
-Nodes (31): api, API_BASE, fetchEsriChange(), fetchEsriHierarchy(), fetchEsriStats(), fetchEsriVisualResource(), predictPatch(), OverviewSystemInfo (+23 more)
+Nodes (32): api, API_BASE, checkHealth(), fetchEsriChange(), fetchEsriHierarchy(), fetchEsriStats(), fetchEsriVisualResource(), predictPatch() (+24 more)
 
 ### Community 6 - "devDependencies"
 Cohesion: 0.06
 Nodes (32): autoprefixer, devDependencies, autoprefixer, oxlint, postcss, tailwindcss, @types/leaflet, @types/node (+24 more)
-
-### Community 7 - "test_dynamic_world_api.py"
-Cohesion: 0.07
-Nodes (11): FastAPI, api_root(), health_check(), lifespan(), get, GeoSat Intelligence — FastAPI Backend (API-Only Production Entrypoint). Serves…, Lifespan context manager that handles server startup and shutdown tasks., API-only root metadata endpoint. (+3 more)
 
 ### Community 8 - "dependencies"
 Cohesion: 0.07
@@ -177,21 +186,21 @@ Nodes (19): compilerOptions, allowImportingTsExtensions, erasableSyntaxOnly, lib
 Cohesion: 0.10
 Nodes (19): Complete Project Workflow, Expected Inputs (Inference), Expected Outputs (Inference), Files Person 2 Should NEVER Modify, Files Provided to Person 2, Folder Structure, Functions Person 2 Should Call, Future Improvements (+11 more)
 
-### Community 17 - "extract_patches"
-Cohesion: 0.18
-Nodes (16): apply_scl_cloud_mask(), extract_patches(), load_bands(), load_scl_band(), normalize_and_stack(), Any, ndarray, Data Preprocessing module for Sentinel-2 satellite images. Memory-optimized for… (+8 more)
+### Community 17 - "inference/predict.py"
+Cohesion: 0.05
+Nodes (46): Predict module for Sentinel-2 Land-Use Classification. Re-exports single patch…, Inference module for model prediction, sliding window tiling, and spatial…, classify_tile(), predict(), preprocess_image(), Any, Tensor, Inference & Tile Classification Module for Sentinel-2 Satellite Imagery.… (+38 more)
 
 ### Community 18 - "components.json"
 Cohesion: 0.11
 Nodes (17): aliases, components, hooks, lib, ui, utils, iconLibrary, rsc (+9 more)
 
 ### Community 19 - "App.tsx"
-Cohesion: 0.16
-Nodes (13): checkHealth(), fetchAvailableCities(), App(), APP_TABS, resolveInitialPage(), UTILITY_PATHS, Navbar(), NavbarProps (+5 more)
+Cohesion: 0.15
+Nodes (13): fetchAvailableCities(), App(), APP_TABS, resolveInitialPage(), UTILITY_PATHS, Navbar(), NavbarProps, OVERVIEW_DISTRICT (+5 more)
 
-### Community 20 - "TileStitcher"
-Cohesion: 0.16
-Nodes (12): Inference module for model prediction, sliding window tiling, and spatial…, Any, ndarray, Stitching and Georeferencing Module for Satellite Image Inference. Reconstructs…, Writes the prediction class map (and optionally confidence map) to a…, Convenience function to stitch a list of patch predictions into a GeoTIFF.…, Reconstructs patch predictions into full-extent GeoTIFF maps. Supports majority…, Args: meta (Dict[str, Any]): Raster metadata dictionary containing 'width',… (+4 more)
+### Community 20 - "utils.py"
+Cohesion: 0.12
+Nodes (15): download_model_weights_if_missing(), find_sentinel_bands(), get_logger(), get_raster_wgs84_bounds(), process_bands_array(), Any, ndarray, Tensor (+7 more)
 
 ### Community 21 - "AboutPage.tsx"
 Cohesion: 0.15
@@ -201,9 +210,9 @@ Nodes (8): Footer(), FooterProps, SITE_CONFIG, PAGE_TITLES, AboutPage(), AboutPa
 Cohesion: 0.12
 Nodes (4): RegionSelectorProps, YearRangePillsProps, RegionYearState, react
 
-### Community 23 - "utils.py"
-Cohesion: 0.12
-Nodes (15): download_model_weights_if_missing(), find_sentinel_bands(), get_logger(), get_raster_wgs84_bounds(), process_bands_array(), Any, ndarray, Tensor (+7 more)
+### Community 23 - "compute_landcover_area_stats"
+Cohesion: 0.17
+Nodes (19): Affine, CRS, DataFrame, Figure, Change Detection Module Top-level Package., Change Detection - Statistics Module Wrapper. Exposes area statistics…, Change Detection package for multi-temporal land cover raster analysis.…, calculate_pixel_area() (+11 more)
 
 ### Community 24 - "test_overview_performance.py"
 Cohesion: 0.18
@@ -213,9 +222,9 @@ Nodes (7): _FakeQueryBuilder, _FakeSupabaseClient, _make_sample_classes(), fixtu
 Cohesion: 0.15
 Nodes (12): Anti-Patterns, Context Optimization, Function Calling, General Guidance, GPT Models, GPT & Open Source Models Adapter, Local Deployment, Model Selection (+4 more)
 
-### Community 26 - "classify_tile"
-Cohesion: 0.22
-Nodes (12): Predict module for Sentinel-2 Land-Use Classification. Re-exports single patch…, classify_tile(), predict(), preprocess_image(), Any, Tensor, Finds Sentinel-2 bands in image_dir, loads them, normalizes, computes…, High-level utility for running single-patch inference on a directory containing… (+4 more)
+### Community 26 - "DynamicWorldService"
+Cohesion: 0.07
+Nodes (50): CityPath, get_boundary(), get_change_stats(), get_cities(), get_layers(), get_metadata(), get_overview_summary(), get_preview() (+42 more)
 
 ### Community 27 - "Section 1: Remote Sensing & Satellite Imagery Fundamentals"
 Cohesion: 0.18
@@ -245,9 +254,9 @@ Nodes (9): 1. Class-wise Performance Breakdown, 2. Detailed Misclassification Ca
 Cohesion: 0.20
 Nodes (10): Q37: Why was FastAPI chosen for the backend framework?, Q38: How does FastAPI's `lifespan` context manager optimize model inference?, Q39: What is CORS, and why is `CORSMiddleware` configured?, Q40: What HTTP status codes are returned by our API?, Q41: How does the API stream file uploads without filling server memory?, Q42: What is the function of `torch.inference_mode()`?, Q43: How does automatic model downloading work if `resnet50_best.pt` is missing?, Q44: What endpoints are exposed in `api.py`? (+2 more)
 
-### Community 35 - "inference/predict.py"
-Cohesion: 0.27
-Nodes (6): Inference & Tile Classification Module for Sentinel-2 Satellite Imagery.…, BaselineCNN, get_model(), get_resnet50(), Loads a pretrained ResNet50 model, modifies the input layer to accept 6…, A simple baseline Convolutional Neural Network for 6-channel satellite imagery.
+### Community 35 - "Any"
+Cohesion: 0.15
+Nodes (9): Any, ndarray, Aggregates real 2019-2025 statewide Tamil Nadu land cover metrics across the 38…, Fetch esri_year_stats rows for multiple locations and years in a single bulk…, Loads and caches the shapely polygon boundary geometry (EPSG:4326)., Reads clipped raster window, reprojects polygon to tile CRS, and masks outside…, Computes land cover class stats. Supports single tile and dual tile (43P + 44P)…, Computes pixel-wise change statistics, real 9x9 transition matrix, and top… (+1 more)
 
 ### Community 36 - "plugins"
 Cohesion: 0.22
@@ -305,9 +314,9 @@ Nodes (6): Q26: What is spatial stitching in remote sensing inference?, Q27: How
 Cohesion: 0.53
 Nodes (5): load_change_stats(), load_regions(), load_year_stats(), main(), Seed Supabase with Esri region hierarchy and cached year-stats JSONs. Does NOT…
 
-### Community 50 - "OverviewDashboard.tsx"
-Cohesion: 0.40
-Nodes (3): OVERVIEW_DISTRICT, OverviewDashboard(), OverviewDashboardProps
+### Community 50 - "run_real_pipeline.py"
+Cohesion: 0.15
+Nodes (20): colorize_class_map(), Converts a 1-band class index TIF into a colored PNG for the frontend., run_pipeline(), _download_http_with_retries(), download_region_recursive(), download_sentinel2_gee(), initialize_gee(), mask_s2_clouds_gee() (+12 more)
 
 ### Community 51 - "upload_to_r2.py"
 Cohesion: 0.50
@@ -325,25 +334,73 @@ Nodes (3): Expanding the Oxlint configuration, React Compiler, React + TypeScrip
 Cohesion: 0.67
 Nodes (3): buildPdfReportBlob(), escapePdfText(), PdfReportInput
 
+### Community 67 - "test_security.py"
+Cohesion: 0.20
+Nodes (6): parse_allowed_origins(), Parse ALLOWED_ORIGINS into (origins, allow_credentials). - In development,…, fixture, reset_rate_limiter(), test_cors_strict_origins_and_preflight(), test_input_validation_and_size_guards()
+
+### Community 77 - "generate_change_map"
+Cohesion: 0.16
+Nodes (17): detect_change(), strict_grid_validation(), generate_validation_png(), Generates a color-mapped PNG for visual validation. Nodata (255) becomes…, load_city_config(), main(), process_city(), valid_mode_raster() (+9 more)
+
+### Community 79 - "EsriService"
+Cohesion: 0.20
+Nodes (7): _r2_preview_exists(), Verify whether the preview PNG exists in R2, with a short-TTL in-memory cache., Resolves to the Cloudflare R2 RGBA PNG preview URL when R2 is configured., EsriService, Private Backblaze B2 buckets use presigned GetObject URLs (no public base URL)., test_b2_client_initializes_without_r2_account_id(), test_b2_presigned_url_generation_and_routes()
+
+### Community 80 - ".resolve_layer_path"
+Cohesion: 0.15
+Nodes (14): Streams a bounded-memory multi-tile merge directly to disk using gdalwarp CLI., Resolves to the physical GeoTIFF raster, merging multiple tiles in bounded…, Validates layer_id prefix and extracts the target year., Corrupt or failing raster merge must return None and leave zero .tmp.tif or…, If one tile in a dual-tile district is unavailable locally and in R2, return…, Verify GDAL /vsicurl/ reads a remote GeoTIFF when HEAD returns 403 (presigned…, Verify GET /raster/{layer} 307 redirect (single-tile R2), 200 GeoTIFF (dual-…, Oversized 43P + 44P tiles must be clipped to Dharmapuri's bbox and cached by… (+6 more)
+
+### Community 81 - "security.py"
+Cohesion: 0.24
+Nodes (10): _bool_env(), _classify_tier(), extract_client_ip(), _int_env(), Security utilities and ASGI middleware for GeoSat Intelligence API: -…, Extract client IP safely behind a reverse proxy (e.g. Render). Uses the…, Headers, Receive (+2 more)
+
+### Community 82 - "main.py"
+Cohesion: 0.20
+Nodes (11): FastAPI, api_root(), health_check(), lifespan(), get, GeoSat Intelligence — FastAPI Backend (API-Only Production Entrypoint). Serves…, Health check endpoint to verify backend status., Lifespan context manager that handles server startup and shutdown tasks. (+3 more)
+
+### Community 83 - "compute_change_detection"
+Cohesion: 0.27
+Nodes (10): Change Detection - Difference Map Module Wrapper. Exposes diff map functions…, align_and_load_rasters(), compute_change_detection(), export_change_geotiff(), Any, ndarray, Change Detection - Difference Map Generation Module. Compares consecutive or…, Exports binary change map and transition codes as a 2-band georeferenced… (+2 more)
+
+### Community 84 - "test_preview_fallback.py"
+Cohesion: 0.18
+Nodes (6): Exception, Raised when streamed request body exceeds MAX_REQUEST_BODY_BYTES., _RequestBodyTooLarge, clear_preview_cache(), fixture, test_r2_s3_head_object_hit_and_miss()
+
+### Community 85 - "InMemoryRateLimiter"
+Cohesion: 0.33
+Nodes (3): InMemoryRateLimiter, Check whether a request is allowed. Returns (allowed, limit, remaining,…, Thread-safe sliding-window per-IP rate limiter.
+
+### Community 86 - "backend_config.py"
+Cohesion: 0.22
+Nodes (6): get_esri_raster_filename(), Configuration settings for the Person 2 Backend & Inference module. Centrally…, Returns canonical Esri 10m LULC GeoTIFF filename for a tile and year., download_sentinel_tile(), get_cdse_token(), Generates an OAuth2 token from the Copernicus Data Space Ecosystem
+
+### Community 88 - ".get_hierarchy"
+Cohesion: 0.36
+Nodes (5): list_hierarchy(), main(), CLI Pipeline to process, clip, and analyze Esri 10m LULC data for Regional,…, run_change(), run_stats()
+
+### Community 89 - "SecurityMiddleware"
+Cohesion: 0.50
+Nodes (3): ASGIApp, Pure ASGI middleware enforcing: - URL length bounds (414) - Streaming request…, SecurityMiddleware
+
 ## Knowledge Gaps
 - **316 isolated node(s):** `$schema`, `typescript`, `oxc`, `react/rules-of-hooks`, `warn` (+311 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `EsriService` connect `EsriService` to `test_overview_performance.py`, `DynamicWorldService`, `backend_config.py`?**
-  _High betweenness centrality (0.046) - this node is a cross-community bridge._
-- **Why does `DynamicWorldService` connect `DynamicWorldService` to `EsriService`, `backend_config.py`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **Why does `react` connect `react` to `plugins`, `client.ts`, `ChangeAnalyticsPage.tsx`, `DynamicWorldDashboard.tsx`, `DownloadActionPanel.tsx`, `TypographyGuide.tsx`, `OverviewDashboard.tsx`, `App.tsx`, `AboutPage.tsx`, `ErrorBoundary`, `navigation-menu.tsx`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
+- **Why does `EsriService` connect `EsriService` to `api/esri.py`, `.get_city_config`, `Any`, `.resolve_layer_path`, `backend_config.py`, `.get_hierarchy`, `test_overview_performance.py`, `DynamicWorldService`?**
+  _High betweenness centrality (0.061) - this node is a cross-community bridge._
+- **Why does `DynamicWorldService` connect `DynamicWorldService` to `.resolve_layer_path`, `.get_city_config`, `backend_config.py`, `EsriService`?**
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
+- **Why does `react` connect `react` to `plugins`, `client.ts`, `ChangeAnalyticsPage.tsx`, `DynamicWorldDashboard.tsx`, `DownloadActionPanel.tsx`, `TypographyGuide.tsx`, `App.tsx`, `AboutPage.tsx`, `PrivacyPage.tsx`, `ErrorBoundary`, `navigation-menu.tsx`?**
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **Are the 26 inferred relationships involving `EsriService` (e.g. with `get_boundary()` and `get_overview_summary()`) actually correct?**
   _`EsriService` has 26 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 20 inferred relationships involving `DynamicWorldService` (e.g. with `get_change_stats()` and `get_cities()`) actually correct?**
   _`DynamicWorldService` has 20 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `$schema`, `typescript`, `oxc` to the rest of the system?**
   _316 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `EsriService` be split into smaller, more focused modules?**
-  _Cohesion score 0.05351170568561873 - nodes in this community are weakly interconnected._
+- **Should `api/esri.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.14022988505747128 - nodes in this community are weakly interconnected._

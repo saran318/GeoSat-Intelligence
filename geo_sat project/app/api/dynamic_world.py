@@ -2,10 +2,10 @@ import os
 import time
 import requests
 import backend_config as bcfg
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, Path, status
 from fastapi.responses import FileResponse, RedirectResponse
 from starlette.concurrency import run_in_threadpool
-from typing import Dict, List, Tuple
+from typing import Annotated, Dict, List, Tuple
 
 from app.schemas.dynamic_world import (
     DynamicWorldCitiesResponse,
@@ -27,6 +27,10 @@ dynamic_world_router = APIRouter(
     tags=["Dynamic World Land Cover"]
 )
 
+CityPath = Annotated[str, Path(min_length=1, max_length=100, pattern=r"^[A-Za-z0-9 _-]+$")]
+YearPath = Annotated[int, Path(ge=2000, le=2100)]
+LayerPath = Annotated[str, Path(min_length=1, max_length=100, pattern=r"^[A-Za-z0-9_.-]+$")]
+
 @dynamic_world_router.get("/cities", response_model=DynamicWorldCitiesResponse)
 async def get_cities():
     cities = DynamicWorldService.get_available_cities()
@@ -47,14 +51,14 @@ async def get_overview_summary():
     return EsriService.get_overview_summary()
 
 @dynamic_world_router.get("/{city}/years", response_model=DynamicWorldYearsResponse)
-async def get_years(city: str):
+async def get_years(city: CityPath):
     years = DynamicWorldService.get_available_years(city)
     if not years:
         raise HTTPException(status_code=404, detail=f"Dynamic World data not found for city: {city}")
     return DynamicWorldYearsResponse(city=city, years=years)
 
 @dynamic_world_router.get("/{city}/layers", response_model=DynamicWorldLayersResponse)
-async def get_layers(city: str):
+async def get_layers(city: CityPath):
     years = DynamicWorldService.get_available_years(city)
     periods = DynamicWorldService.get_change_periods(city)
     
@@ -76,35 +80,35 @@ async def get_layers(city: str):
     return DynamicWorldLayersResponse(city=city, layers=layers)
 
 @dynamic_world_router.get("/{city}/metadata/{year}", response_model=DynamicWorldMetadata)
-async def get_metadata(city: str, year: int):
+async def get_metadata(city: CityPath, year: YearPath):
     metadata = DynamicWorldService.get_metadata(city, year)
     if not metadata:
         raise HTTPException(status_code=404, detail=f"Metadata not found for {city} {year}")
     return DynamicWorldMetadata(**metadata)
 
 @dynamic_world_router.get("/{city}/stats/{year}", response_model=DynamicWorldClassStats)
-async def get_stats(city: str, year: int):
+async def get_stats(city: CityPath, year: YearPath):
     stats = DynamicWorldService.get_stats(city, year)
     if not stats:
         raise HTTPException(status_code=404, detail=f"Statistics not found for {city} {year}")
     return DynamicWorldClassStats(**stats)
 
 @dynamic_world_router.get("/{city}/change/{from_year}/{to_year}/stats", response_model=DynamicWorldChangeStats)
-async def get_change_stats(city: str, from_year: int, to_year: int):
+async def get_change_stats(city: CityPath, from_year: YearPath, to_year: YearPath):
     stats = DynamicWorldService.get_change_stats(city, from_year, to_year)
     if not stats:
         raise HTTPException(status_code=404, detail=f"Change statistics not found for {city} {from_year}-{to_year}")
     return DynamicWorldChangeStats(**stats)
 
 @dynamic_world_router.get("/{city}/change/{from_year}/{to_year}/transitions", response_model=DynamicWorldTransitionMatrix)
-async def get_transitions(city: str, from_year: int, to_year: int):
+async def get_transitions(city: CityPath, from_year: YearPath, to_year: YearPath):
     matrix = DynamicWorldService.get_transition_matrix(city, from_year, to_year)
     if not matrix:
         raise HTTPException(status_code=404, detail=f"Transition matrix not found for {city} {from_year}-{to_year}")
     return DynamicWorldTransitionMatrix(**matrix)
 
 @dynamic_world_router.get("/{city}/raster/{layer}")
-async def get_raster(city: str, layer: str):
+async def get_raster(city: CityPath, layer: LayerPath):
     r2_url = DynamicWorldService.resolve_layer_url(city, layer)
     if r2_url:
         return RedirectResponse(url=r2_url, status_code=307)
@@ -150,7 +154,7 @@ def _r2_preview_exists(r2_url: str, city: str, layer: str) -> bool:
 
 
 @dynamic_world_router.get("/{city}/preview/{layer}")
-async def get_preview(city: str, layer: str):
+async def get_preview(city: CityPath, layer: LayerPath):
     r2_url = DynamicWorldService.resolve_preview_url(city, layer)
     if r2_url and _r2_preview_exists(r2_url, city, layer):
         return RedirectResponse(url=r2_url, status_code=307)
@@ -169,7 +173,7 @@ async def get_preview(city: str, layer: str):
 
 @dynamic_world_router.get("/{city}/boundary")
 @dynamic_world_router.get("/boundary/{city}")
-async def get_boundary(city: str):
+async def get_boundary(city: CityPath):
     """Returns the GeoJSON polygon boundary for the requested city or district."""
     conf = EsriService.get_city_config(city)
     boundary_path = None

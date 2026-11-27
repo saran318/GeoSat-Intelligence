@@ -9,8 +9,16 @@ services:
     envVars:
       - key: ENV
         value: production
+      - key: ENABLE_API_DOCS
+        value: "false"
       - key: ALLOWED_ORIGINS
         sync: false
+      - key: RATE_LIMIT_ENABLED
+        value: "true"
+      - key: RATE_LIMIT_DEFAULT_PER_MINUTE
+        value: "120"
+      - key: RATE_LIMIT_EXPENSIVE_PER_MINUTE
+        value: "30"
       - key: SUPABASE_URL
         sync: false
       - key: SUPABASE_KEY
