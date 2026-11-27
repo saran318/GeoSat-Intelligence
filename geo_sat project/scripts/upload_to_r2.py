@@ -68,15 +68,18 @@ def main():
         return
 
     import boto3
+    from botocore.config import Config
 
-    account_id = os.environ["R2_ACCOUNT_ID"]
-    bucket = os.environ["R2_BUCKET_NAME"]
+    endpoint_url = os.environ.get("B2_ENDPOINT_URL", "https://s3.us-east-005.backblazeb2.com")
+    region_name = os.environ.get("B2_REGION", "us-east-005")
+    bucket = os.environ.get("B2_BUCKET_NAME", "geosat-assets")
     s3 = boto3.client(
         "s3",
-        endpoint_url=f"https://{account_id}.r2.cloudflarestorage.com",
-        aws_access_key_id=os.environ["R2_ACCESS_KEY_ID"],
-        aws_secret_access_key=os.environ["R2_SECRET_ACCESS_KEY"],
-        region_name="auto",
+        endpoint_url=endpoint_url,
+        region_name=region_name,
+        aws_access_key_id=os.environ["B2_ACCESS_KEY_ID"],
+        aws_secret_access_key=os.environ["B2_SECRET_ACCESS_KEY"],
+        config=Config(signature_version="s3v4"),
     )
 
     for idx, (local_path, r2_key) in enumerate(assets, start=1):

@@ -92,34 +92,33 @@ class EsriService:
 
     @classmethod
     def _get_r2_public_url(cls) -> str:
-        return (
-            os.getenv("R2_PUBLIC_URL")
-            or os.getenv("R2_PUBLIC_BASE_URL")
-            or bcfg.R2_PUBLIC_URL
-            or ""
-        ).strip().rstrip("/")
+        """Private Backblaze B2 buckets use presigned GetObject URLs (no public base URL)."""
+        return ""
 
     @classmethod
     def _get_s3_client(cls) -> Optional[Any]:
         if cls._s3_init_attempted:
             return cls._s3_client
         cls._s3_init_attempted = True
-        account_id = (os.getenv("R2_ACCOUNT_ID") or bcfg.R2_ACCOUNT_ID or "").strip()
-        access_key = (os.getenv("R2_ACCESS_KEY_ID") or bcfg.R2_ACCESS_KEY_ID or "").strip()
-        secret_key = (os.getenv("R2_SECRET_ACCESS_KEY") or bcfg.R2_SECRET_ACCESS_KEY or "").strip()
-        if not (account_id and access_key and secret_key):
+        endpoint_url = (os.getenv("B2_ENDPOINT_URL") or bcfg.B2_ENDPOINT_URL or "").strip().rstrip("/")
+        region_name = (os.getenv("B2_REGION") or bcfg.B2_REGION or "us-east-005").strip()
+        access_key = (os.getenv("B2_ACCESS_KEY_ID") or bcfg.B2_ACCESS_KEY_ID or "").strip()
+        secret_key = (os.getenv("B2_SECRET_ACCESS_KEY") or bcfg.B2_SECRET_ACCESS_KEY or "").strip()
+        if not (endpoint_url and access_key and secret_key):
             return None
         try:
             import boto3  # type: ignore[import-not-found]
+            from botocore.config import Config  # type: ignore[import-not-found]
             cls._s3_client = boto3.client(
                 "s3",
-                endpoint_url=f"https://{account_id}.r2.cloudflarestorage.com",
+                endpoint_url=endpoint_url,
+                region_name=region_name,
                 aws_access_key_id=access_key,
                 aws_secret_access_key=secret_key,
-                region_name="auto",
+                config=Config(signature_version="s3v4"),
             )
         except Exception as e:
-            logger.warning(f"Failed to initialize R2 S3 client: {e}")
+            logger.warning(f"Failed to initialize Backblaze B2 S3 client: {e}")
             cls._s3_client = None
         return cls._s3_client
 
@@ -127,10 +126,10 @@ class EsriService:
     def is_r2_configured(cls) -> bool:
         if cls._get_r2_public_url():
             return True
-        account_id = (os.getenv("R2_ACCOUNT_ID") or bcfg.R2_ACCOUNT_ID or "").strip()
-        access_key = (os.getenv("R2_ACCESS_KEY_ID") or bcfg.R2_ACCESS_KEY_ID or "").strip()
-        secret_key = (os.getenv("R2_SECRET_ACCESS_KEY") or bcfg.R2_SECRET_ACCESS_KEY or "").strip()
-        return bool(account_id and access_key and secret_key)
+        endpoint_url = (os.getenv("B2_ENDPOINT_URL") or bcfg.B2_ENDPOINT_URL or "").strip()
+        access_key = (os.getenv("B2_ACCESS_KEY_ID") or bcfg.B2_ACCESS_KEY_ID or "").strip()
+        secret_key = (os.getenv("B2_SECRET_ACCESS_KEY") or bcfg.B2_SECRET_ACCESS_KEY or "").strip()
+        return bool(endpoint_url and access_key and secret_key)
 
     @classmethod
     def resolve_r2_url(cls, r2_key: str, expires_in: int = 3600) -> Optional[str]:
@@ -139,7 +138,7 @@ class EsriService:
         if public_base:
             return f"{public_base}/{quote(clean_key, safe='/')}"
         s3 = cls._get_s3_client()
-        bucket = (os.getenv("R2_BUCKET_NAME") or bcfg.R2_BUCKET_NAME or "geosat-assets").strip()
+        bucket = (os.getenv("B2_BUCKET_NAME") or bcfg.B2_BUCKET_NAME or "geosat-assets").strip()
         if s3 is not None and bucket:
             try:
                 return s3.generate_presigned_url(
@@ -148,7 +147,7 @@ class EsriService:
                     ExpiresIn=expires_in,
                 )
             except Exception as e:
-                logger.warning(f"Failed to generate R2 presigned URL for {clean_key}: {e}")
+                logger.warning(f"Failed to generate B2 presigned URL for {clean_key}: {e}")
         return None
 
     @classmethod

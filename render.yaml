@@ -15,13 +15,13 @@ services:
         sync: false
       - key: SUPABASE_KEY
         sync: false
-      - key: R2_PUBLIC_URL
+      - key: B2_ENDPOINT_URL
+        value: https://s3.us-east-005.backblazeb2.com
+      - key: B2_REGION
+        value: us-east-005
+      - key: B2_BUCKET_NAME
+        value: geosat-assets
+      - key: B2_ACCESS_KEY_ID
         sync: false
-      - key: R2_ACCOUNT_ID
-        sync: false
-      - key: R2_ACCESS_KEY_ID
-        sync: false
-      - key: R2_SECRET_ACCESS_KEY
-        sync: false
-      - key: R2_BUCKET_NAME
+      - key: B2_SECRET_ACCESS_KEY
         sync: false

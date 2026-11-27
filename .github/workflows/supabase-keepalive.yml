@@ -1,0 +1,94 @@
+name: Supabase Keepalive
+
+on:
+  schedule:
+    # Run every 3 days at 04:17 UTC (off-peak minute to reduce Actions queue delay)
+    - cron: '17 4 */3 * *'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  keepalive:
+    name: Ping Supabase Projects
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Send keepalive requests
+        env:
+          SUPABASE_PROJECTS: ${{ secrets.SUPABASE_PROJECTS }}
+        run: |
+          set -uo pipefail
+
+          if [ -z "${SUPABASE_PROJECTS:-}" ]; then
+            echo "::error::SUPABASE_PROJECTS secret is not set or is empty."
+            exit 1
+          fi
+
+          if ! echo "$SUPABASE_PROJECTS" | jq -e 'type == "array" and length > 0' >/dev/null 2>&1; then
+            echo "::error::SUPABASE_PROJECTS must be a non-empty JSON array."
+            exit 1
+          fi
+
+          project_count=$(echo "$SUPABASE_PROJECTS" | jq 'length')
+          echo "Checking ${project_count} Supabase project(s)..."
+
+          success_count=0
+          failure_count=0
+
+          for i in $(seq 0 $((project_count - 1))); do
+            name=$(echo "$SUPABASE_PROJECTS" | jq -r ".[$i].name // \"project-$((i + 1))\"")
+            url=$(echo "$SUPABASE_PROJECTS" | jq -r ".[$i].url // empty")
+            anon_key=$(echo "$SUPABASE_PROJECTS" | jq -r ".[$i].anon_key // empty")
+
+            if [ -n "$anon_key" ]; then
+              echo "::add-mask::$anon_key"
+            fi
+            if [ -n "$url" ]; then
+              echo "::add-mask::$url"
+            fi
+
+            if [ -z "$url" ] || [ -z "$anon_key" ]; then
+              echo "[FAIL] ${name} -> Missing 'url' or 'anon_key' in secret entry."
+              failure_count=$((failure_count + 1))
+              continue
+            fi
+
+            base_url="${url%/}"
+            endpoint="${base_url}/rest/v1/"
+
+            curl_args=(
+              -sS
+              -o /dev/null
+              -w "%{http_code}"
+              --connect-timeout 10
+              --max-time 20
+              -H "apikey: ${anon_key}"
+            )
+
+            # Include Authorization header for legacy JWT anon keys; publishable keys use apikey only.
+            if [[ "$anon_key" == eyJ* ]]; then
+              curl_args+=(-H "Authorization: Bearer ${anon_key}")
+            fi
+
+            http_code=$(curl "${curl_args[@]}" "$endpoint")
+            curl_exit=$?
+
+            if [ "$curl_exit" -ne 0 ]; then
+              echo "[FAIL] ${name} -> Connection error (curl exit code: ${curl_exit})"
+              failure_count=$((failure_count + 1))
+            elif [ "$http_code" -ge 200 ] && [ "$http_code" -lt 300 ]; then
+              echo "[OK]   ${name} -> HTTP ${http_code}"
+              success_count=$((success_count + 1))
+            else
+              echo "[FAIL] ${name} -> HTTP ${http_code}"
+              failure_count=$((failure_count + 1))
+            fi
+          done
+
+          echo "Summary: ${success_count} succeeded, ${failure_count} failed."
+
+          if [ "$failure_count" -gt 0 ]; then
+            exit 1
+          fi

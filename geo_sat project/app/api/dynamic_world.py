@@ -136,7 +136,7 @@ def _r2_preview_exists(r2_url: str, city: str, layer: str) -> bool:
             exists = False
     else:
         s3_client = EsriService._get_s3_client()
-        bucket = (os.getenv("R2_BUCKET_NAME") or bcfg.R2_BUCKET_NAME or "geosat-assets").strip()
+        bucket = (os.getenv("B2_BUCKET_NAME") or bcfg.B2_BUCKET_NAME or "geosat-assets").strip()
         key = f"previews/esri/{city.lower()}_{layer}.png"
         if s3_client is not None and bucket:
             try:

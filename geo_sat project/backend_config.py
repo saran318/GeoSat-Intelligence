@@ -101,16 +101,12 @@ SUPABASE_KEY = (
     or ""
 ).strip()
 
-# ── Cloudflare R2 (GeoTIFFs, Previews, Result Assets) ────────────────────────
-R2_PUBLIC_URL = (
-    os.getenv("R2_PUBLIC_URL")
-    or os.getenv("R2_PUBLIC_BASE_URL")
-    or ""
-).strip().rstrip("/")
-R2_ACCOUNT_ID = os.getenv("R2_ACCOUNT_ID", "").strip()
-R2_ACCESS_KEY_ID = os.getenv("R2_ACCESS_KEY_ID", "").strip()
-R2_SECRET_ACCESS_KEY = os.getenv("R2_SECRET_ACCESS_KEY", "").strip()
-R2_BUCKET_NAME = os.getenv("R2_BUCKET_NAME", "geosat-assets").strip()
+# ── Backblaze B2 (GeoTIFFs, Previews, Visual Assets) ─────────────────────────
+B2_ENDPOINT_URL = os.getenv("B2_ENDPOINT_URL", "https://s3.us-east-005.backblazeb2.com").strip().rstrip("/")
+B2_REGION = os.getenv("B2_REGION", "us-east-005").strip()
+B2_BUCKET_NAME = os.getenv("B2_BUCKET_NAME", "geosat-assets").strip()
+B2_ACCESS_KEY_ID = os.getenv("B2_ACCESS_KEY_ID", "").strip()
+B2_SECRET_ACCESS_KEY = os.getenv("B2_SECRET_ACCESS_KEY", "").strip()
 
 # Logging Configuration
 LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
